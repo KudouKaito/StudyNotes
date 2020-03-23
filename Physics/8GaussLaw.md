@@ -13,7 +13,7 @@ S 为封闭曲面时
 $d{\phi}_e=\vec{E}{\cdot}d\vec{S}$  
 ${\phi}_e=\oint_{S}\vec{E}{\cdot}d\vec{S}$  
 ## 高斯定理  
-通过真空中的静电场中任一**闭合面**的电通量$\phi_e$等于包围在该闭合曲面**内**的电荷代数和$\sum{qi}$的$\epsilon_0$分之一    
+通过真空中的静电场中任一**闭合面**的电通量$\phi_e$等于包围在该闭合曲面**内**的电荷代数和$\sum{q_i}$的$\epsilon_0$分之一,闭合曲面外的电荷对通过闭合曲面的电通量没有贡献    
 $$ {\phi}_e=\oint_{S}{\vec{E}}{\cdot}d\vec{S}=\frac{1}{\epsilon_0}\sum{q_i} $$  
 ### 点电荷在球心:  
 $\phi_e=\oint_{S}{\vec{E}}{\cdot}d{\vec{S}}=\vec{E}{\cdot}\oint_{S}{S}=\frac{q}{4\pi\epsilon_0r^2}{\cdot}4{\pi}r^2$  
