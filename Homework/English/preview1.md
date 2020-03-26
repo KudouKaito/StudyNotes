@@ -1,0 +1,2 @@
+# Do you think language can help shape one's mind? Why or why not?  
+<tab>In my opinion, language can help shape one's mind. Every language is based on its profound culture. Learning a language, we not only learn its grammar and its words but also lean lots of extra things languages containa. For example, when we are learning English, we will read a numbers of English or American essays and view lots of video by them, which will effect our mind. So I am convinced that language can shape one's mind.  
