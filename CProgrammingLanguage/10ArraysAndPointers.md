@@ -10,16 +10,16 @@ type array[length];
 只储存单个字符的变量称为**标量变量(scaler variable)**
 
 ## 输入输出字符串的函数  
-|格式及格式|||
-### scanf()  
+### stdio.h库函数  
+#### printf()  
+#### scanf()  
 以空白符分隔或结束, 可进行多个变量的输入储存  
-### gets()  
+### string.h库函数  
+#### gets()  
 以换行符结束, 并且将'\n'转换成'\0'
-### printf()  
 
-### puts()  
+#### puts()  
 输出完之后再输出一个'\n'
-string.h库函数  
 strcat追加字符串
 strcpy用来字符串赋值
 strncpy控制copy多少个字符
