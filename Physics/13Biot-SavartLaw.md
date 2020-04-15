@@ -24,7 +24,15 @@ $$ B=\frac{dB}{dN}=\frac{\mu_0}{4\pi}\frac{}{} $$
 $$ B=\frac{\mu_0I}{2{\pi}a}(\cos\alpha_1-\cos\alpha_2) $$
 ### 无限长载流直导线  
 $$ B=\frac{\mu_0I}{2{\pi}a} $$
+a为点到导线的距离  
 ### 载流圆弧在圆心产生的磁场  
 $$ B=\frac{\mu_0I}{2R}\frac{\theta}{2\pi} $$
 圆环:
 $$ B=\frac{\mu_0I}{2R} $$
+方向:右手螺旋法则  
+### 无限长平行薄产生的磁场  
+$$ dI=\frac{I}{a}dx $$  
+$$ dB=\frac{\mu_0dI}{2{\pi}(l+a-x)} $$  
+$$ B=\int_{0}^{a}\frac{\mu_0Idx}{2{\pi}a(l+a-x)} $$  
+
+
