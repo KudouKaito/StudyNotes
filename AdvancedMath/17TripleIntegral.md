@@ -25,7 +25,7 @@ P167
 
 
 ### 利用柱坐标计算三重积分  
-$$ \iint_{D_{xy}}({\int_{z_1(x,y)}^{z_2(x,y)}{f(x,y,z)dz})dxdy}=\iint_{D_{xy}}{\rho d\rho d\theta}\int_{z_1(\rho\cos\theta,\rho\sin\theta}^{z_2(\rho\cos\theta,\rho\sin\theta}{f(\rho\cos\theta,\rho\sin\theta,z)dz} $$
+$$ \iint_{D_{xy}}({\int_{z_1(x,y)}^{z_2(x,y)}{f(x,y,z)dz})dxdy}=\iint_{D_{xy}}{\rho d\rho d\theta}\int_{z_1(\rho\cos\theta,\rho\sin\theta)}^{z_2(\rho\cos\theta,\rho\sin\theta)}{f(\rho\cos\theta,\rho\sin\theta,z)dz} $$
 
 ### 利用球坐标计算三重积分  
 $\{x=r\sin\phi\cos\theta$  
