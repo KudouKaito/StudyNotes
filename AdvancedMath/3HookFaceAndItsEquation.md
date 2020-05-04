@@ -18,6 +18,25 @@ F(x,y,z)=0
 截痕法、伸缩变换  
 
 
+# 常见曲线以及其方程  
+1. [椭圆锥面](Image/EllipticCone.png):  
+$$\frac{x^2}{a^2}+\frac{y^2}{b^2}=z^2$$  
+
+2. [椭圆抛物面](Image/Paraboloid.png):  
+$$\frac{x^2}{a^2}+\frac{y^2}{b^2}=z$$  
+
+3. 双曲抛物面:  
+$$\frac{x^2}{a^2}-\frac{y^2}{b^2}=z$$  
+[图1](Image/HyperbolicParaboloid_1.png)  
+[图2](Image/HyperbolicParaboloid_2.png)  
+
+4. 椭球面:  
+$$\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=1$$  
+- 当a=b=c时是球面  
+5. 椭圆柱面:  
+$$\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$$  
+- 当a=b时是圆柱面
+
 
 作业 P45  
 4,7,8(1)(2),11

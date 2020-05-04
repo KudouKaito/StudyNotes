@@ -10,7 +10,7 @@ A(x-x0)+B(y-y0)+C(z-z0)=0
 
 **特别**,当三点为与坐标轴相交时
 
- ## 平面的一般式方程
+## 平面的一般式方程
 Ax+By+Cz+D=0(A^2+B^2+C2 != 0)  
 法向量**n**=(A,B,C)
 
@@ -35,22 +35,3 @@ x/a+y/b+z/c=1
 d=|Prj(**n**)**P1P0**|  
  =|A(x0-x1)+B(y0-y1)+C(z0-z1)|/|**n**|  
  =|Ax0+By0+Cz0-D|/sqrt(A^2+B^2+C^2)
-
-# 常见曲线以及其方程  
-1. [椭圆锥面](Image/EllipticCone.png):  
-$$\frac{x^2}{a^2}+\frac{y^2}{b^2}=z^2$$  
-
-2. [双曲抛物面](Image/Paraboloid.png):  
-$$\frac{x^2}{a^2}+\frac{y^2}{b^2}=z$$  
-
-3. 双曲抛物面:  
-$$\frac{x^2}{a^2}-\frac{y^2}{b^2}=z$$  
-[图1](Image/HyperbolicParaboloid_1.png)  
-[图2](Image/HyperbolicParaboloid_2.png)  
-
-4. 椭球面:  
-$$\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=1$$  
-- 当a=b=c时是球面  
-5. 椭圆柱面:  
-$$\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$$  
-- 当a=b时是圆柱面
