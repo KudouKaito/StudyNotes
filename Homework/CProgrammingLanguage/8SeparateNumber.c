@@ -22,7 +22,6 @@ int numDeparateWith5(char pendingStr[],int adopter[])
     {
         numReading=pendingStr[i]-'0';// 将字符转换为数字
         //// 将5看成空格,跳过,并转换到下一个数组储存下一个数字
-        //for(;(numReading=pendingStr[i]-'0')==5 || mark&&count++&&0;i++,mark++);
         //if(pendingStr[i]=='\0'){count--;break;}
         if(numReading!=5)
         {

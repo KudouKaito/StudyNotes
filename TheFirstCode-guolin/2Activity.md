@@ -37,8 +37,19 @@ Activity类中定义了7中回调方法。
 ![ActivityLifecycle_CN](Image/ActivityLifecycle_CN.gif)
 ![ActivityLifecycle_EN](Image/ActivityLifecycle_EN.gif)
 #### onStart和onRestert的区别  
+onRestart()在Destory后在启动程序的情况下**不会启动**  
+目前知道两种情况只启动onStart()不启动onRestart():  
+1. 刚启动程序的时候  
+2. 屏幕翻转(屏幕翻转会Destory这个活动然后重新创建启动)   
 
+where in `Head First Android book` it is stated that:
 
+>" : When you rotate the device, the activity is destroyed and a new one is created in its place. If we’d put code in the onRestart() method instead, it wouldn’t have run when the activity was re-created. The onStart() method gets called in both situations."
 
+>onRestart() is called only if onStop() has been called before
+>
+>https://developer.android.com/guide/components/activities/activity-lifecycle.html
+>
+>The activity was stopped and you are RE-starting it hence onRestart(). The very first time or after the activity has been destroyed it's just onStart()
 
-
+来源:[https://stackoverflow.com/questions/46867109/what-is-the-difference-between-onrestart-and-onstart](https://stackoverflow.com/questions/46867109/what-is-the-difference-between-onrestart-and-onstart)  

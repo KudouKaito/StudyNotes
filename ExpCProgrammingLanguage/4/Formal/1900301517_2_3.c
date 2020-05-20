@@ -40,6 +40,3 @@ float avgClass(int score[],int N)
         sum+=score[i];
     return sum/N;
 }
-
-
-

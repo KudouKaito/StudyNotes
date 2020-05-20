@@ -12,6 +12,18 @@ dz=df=Adelta x+Bdelta y
 A,B为偏导  
 du=Adx+Bdy+Cdz  
 A,B,C为偏导数  
+
+是否可微:  
+充要条件:偏导数即存在且函数连续  
+充分条件:偏导数连续  
+必要条件:  
+偏导数存在  
+函数连续  
+$$\lim{\frac{\Delta{z}-dz}}{\rho}=0$$
+$$\Delta{z}=f(x_0+\Delta{x},y_0+\Delta{y})$$
+
+
+
 ## 应用  
 ### 近似计算  
 
