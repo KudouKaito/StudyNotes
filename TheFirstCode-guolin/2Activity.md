@@ -95,4 +95,45 @@ where in `Head First Android book` it is stated that:
 也就是说,它一启动,其它Activity都得销毁(除singleInstance中的Activity外).  
 ### singleInstace  
 启动这个活动,会创建一个新的栈(这个栈中只有这个活动,并且这个活动也只能有一个实例)  
-PS:当应用程序其中一个返回栈的实例全都出栈时,会自动跳到其余的栈,不会立马退出应用程序  
+PS:当应用程序其中一个返回栈的实例全都出栈时,不会立马退出应用程序,而是会自动跳到其余的栈  
+## 2.6 活动的最佳实践  
+### 2.6.1 知晓当前活动是在哪一个活动  
+右键com.example.activitytest,创建一个BaseActivity继承于AppCompatActivity,重写onCreat(),在其中加入logd,输出getClass().getSimpleName,然后让所有活动都继承于BaseActivity.这样每一个活动启动的时候都会输出一个活动名了  
+### 2.6.2 随时随地退出程序
+新建一个ActivityCollector类作为活动管理器.  
+代码如下:  
+```Java
+public class ActivityCollector {
+    public static List<Activity> activities = new ArrayList<>();
+
+    public static void addActivity(Activity activity) {
+        activities.add(activity);
+    }
+
+    public static void removeActivity(Activity activity) {
+        activities.remove(activity);
+    }
+
+    public static void finishAll() {
+        for (Activity activity : activities) {
+            if (!activity.isFinishing()) {
+                activity.finish();
+            }
+        }
+        activity.clear(); // 这个应该是清除列表的操作
+    }
+}
+```
+然后修改BaseActivity中的内容  
+```Java
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        ActivityCollector.addActivity(this);
+    }
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        ActivityCollector.removeActivity(this);
+    }
+```
