@@ -137,3 +137,9 @@ public class ActivityCollector {
         ActivityCollector.removeActivity(this);
     }
 ```
+如果要一次性退出所有活动,直接调用ActivityCollector.finishAll();就可以了  
+当然也可以加上杀掉当前进程的代码,以保证程序完全退出  
+```Java
+android.os.Process.killProcess(android.os.Process.myPid());
+```
+只能用这个方法结束当前进程  
