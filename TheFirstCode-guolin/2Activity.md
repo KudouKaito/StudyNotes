@@ -142,4 +142,22 @@ public class ActivityCollector {
 ```Java
 android.os.Process.killProcess(android.os.Process.myPid());
 ```
-只能用这个方法结束当前进程  
+这个方法只能用于结束当前进程  
+### 2.6.3 启动活动的最佳方法  
+为了方便别人(包括自己)给自己写的活动传递数据.我们可以写一个"接口"(一个方法,姑且这么叫,与Java语法上的接口不是同一个东西),让别人调用这个"接口"来启动我们写的活动并传递数据.  
+这样的优势是,**别人可以从这个"接口"中知道,我们的活动需要传递什么数据.**  
+如果不这样,可能别人要重新读一遍你的代码,或者来询问你才知道你的活动需要什么数据.  
+要实现这个"接口",我们得在我们的活动里面写一个方法,例如如下的actionStart():  
+```Java
+public class OurActivity extends BaseActivity {
+    public static void actionStart(Context context, String data1, String data2) {
+        Intent intent = new Intent (context, OurActivity.class);
+        intent.putString("param1",data1);
+        intent.putString("param2",data2);
+        context.startActicity(intent);
+    }
+}
+```
+这样,启动我们的活动只需要调用actionStart()就可以了:  
+
+<kbd>End<kbd>
