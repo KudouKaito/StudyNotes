@@ -58,3 +58,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 }
 ```
 感觉这种方式也很不错,所有事件聚集写在一起,方便查看  
+
+### 3.2.3 EditText  
+#### android:hint  
+#### android:maxLines  
+默认EditText随着文本的增多会不断的拉长.  
+而如果设置了maxLines就可以限制最大的行数了,超过最大行数上面的文本就会被淹没.  
+#### 获取编辑框的内容  
+(先将EditText绑到变量editText上)  
+editText.getText().toString();  
