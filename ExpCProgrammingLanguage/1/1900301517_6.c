@@ -19,6 +19,6 @@ int main(void)
             printf("运算符有误");
             return 0;
     }
-    printf("%.2lf", result);
+    printf("%.2f", result);
     return 0;
 }

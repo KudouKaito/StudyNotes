@@ -33,6 +33,6 @@ int main()
         scanf("%d",&num);
     }
     for(p=head;p != NULL;p=p->next)
-    printf("%d  %s  %d\n",p->num,p->name,p->score);
+        printf("%d  %s  %d\n",p->num,p->name,p->score);
     return 0;
 }
