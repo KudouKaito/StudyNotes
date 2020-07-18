@@ -2,8 +2,8 @@
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
 <node TEXT="第7章 静电场" FOLDED="false" ID="ID_444648297" CREATED="1594801069451" MODIFIED="1594801430456" STYLE="oval">
 <font SIZE="18"/>
-<hook NAME="MapStyle">
-    <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" fit_to_viewport="false"/>
+<hook NAME="MapStyle" zoom="2.0">
+    <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" fit_to_viewport="false" show_icon_for_attributes="true" show_note_icons="true"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24.0 pt">
@@ -77,7 +77,7 @@
 <node TEXT="\latex $\vec{E}=\frac{q}{4\pi\varepsilon_0r^2}\vec{r}_0$" ID="ID_1367684097" CREATED="1594802833149" MODIFIED="1594805094002"/>
 </node>
 <node TEXT="点电荷系" ID="ID_1672939107" CREATED="1594802823686" MODIFIED="1594802933767">
-<node TEXT="\latex $\vec{E}=\sum\limits_{i=1}^{n}{E_i}=\sum\limits_{i=1}^{n}\frac{q_i}{4\pi\varepsilon_0r_i^2}\vec{r}_{i0}$" ID="ID_120595416" CREATED="1594802833149" MODIFIED="1594985504433"/>
+<node TEXT="\latex $\vec{E}=\sum\limits_{i=1}^{n}{\vec{E}_i}=\sum\limits_{i=1}^{n}\frac{q_i}{4\pi\varepsilon_0r_i^2}\vec{r}_{i0}$" ID="ID_120595416" CREATED="1594802833149" MODIFIED="1595056044263"/>
 </node>
 <node TEXT="电荷连续分布的带电体" ID="ID_907735232" CREATED="1594803929165" MODIFIED="1594803982781">
 <node TEXT="\latex $d\vec{E}={\frac{dq}{4\pi\varepsilon_0r^2}}\vec{r}_0$" ID="ID_251185639" CREATED="1594804049850" MODIFIED="1594805070062">
@@ -140,7 +140,7 @@
 <node TEXT="\latex $U=\frac{q}{4\pi\varepsilon_0r}$" ID="ID_647689870" CREATED="1594802833149" MODIFIED="1594985443858"/>
 </node>
 <node TEXT="点电荷系" ID="ID_833129266" CREATED="1594802823686" MODIFIED="1594802933767">
-<node TEXT="\latex $U=\sum\limits_{i=1}^{n}\frac{q_i}{4\pi\varepsilon_0r_i}$" ID="ID_991238467" CREATED="1594802833149" MODIFIED="1594985519035"/>
+<node TEXT="\latex $U=\sum\limits_{i=1}^{n}\frac{q_i}{4\pi\varepsilon_0r_i}$(求和,而不是$E_合{\cdot}r$)" ID="ID_991238467" CREATED="1594802833149" MODIFIED="1595054080466"/>
 </node>
 <node TEXT="电荷连续分布的带电体的电势" ID="ID_1293445137" CREATED="1594803929165" MODIFIED="1594985545784">
 <node TEXT="\latex $U=\int_UdU=\int_q{\frac{dq}{4\pi\varepsilon_0r}}$" ID="ID_1202938939" CREATED="1594804049850" MODIFIED="1594985665130"/>
@@ -156,7 +156,7 @@
 </node>
 </node>
 </node>
-<node TEXT="静电场的基本性质" POSITION="right" ID="ID_1008240126" CREATED="1594815087535" MODIFIED="1594815096875">
+<node TEXT="静电场的基本性质" POSITION="left" ID="ID_1008240126" CREATED="1594815087535" MODIFIED="1594815096875">
 <edge COLOR="#00007c"/>
 <node TEXT="真空中的高斯定理" ID="ID_891887579" CREATED="1594815099722" MODIFIED="1594815109885">
 <node TEXT="\latex $\oint\limits_S{\vec{E}{\cdot}d\vec{S}}=\frac{\sum{q_i}}{\varepsilon_0}$" ID="ID_1702179107" CREATED="1594815110495" MODIFIED="1594985259561"/>
@@ -170,7 +170,7 @@
 <node TEXT="\latex $\oint\limits_l{\vec{E}{\cdot}d\vec{l}}=0$" ID="ID_1025358609" CREATED="1594815110495" MODIFIED="1594985391808"/>
 </node>
 </node>
-<node TEXT="处于静电场中的导体" POSITION="right" ID="ID_1854378868" CREATED="1594985881026" MODIFIED="1594985894582">
+<node TEXT="处于静电场中的导体" POSITION="left" ID="ID_1854378868" CREATED="1594985881026" MODIFIED="1594985894582">
 <edge COLOR="#007c00"/>
 <node TEXT="静电平衡条件" ID="ID_332500301" CREATED="1594985897433" MODIFIED="1594985910233">
 <node TEXT="导体内部的电场强度为零在" ID="ID_1975201305" CREATED="1594985910417" MODIFIED="1594987965560"/>
@@ -186,7 +186,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 </node>
@@ -196,7 +195,7 @@
 <node TEXT="孤立导体表面电荷面密度与表面区率有关: 曲率大 ,电荷面密度大; 曲率小, 电荷面密度小" ID="ID_1894471082" CREATED="1594988161712" MODIFIED="1594988259107"/>
 </node>
 </node>
-<node TEXT="电容" POSITION="right" ID="ID_23435786" CREATED="1594988361264" MODIFIED="1594988369046">
+<node TEXT="电容" POSITION="left" ID="ID_23435786" CREATED="1594988361264" MODIFIED="1594988369046">
 <edge COLOR="#7c007c"/>
 <node TEXT="孤立导体" ID="ID_120766125" CREATED="1594988385625" MODIFIED="1594988391536">
 <node TEXT="\latex $C=\frac{q}{U}$" ID="ID_1788196563" CREATED="1594988391647" MODIFIED="1594988587478"/>
@@ -221,7 +220,7 @@
 <node TEXT="\latex $C=\sum{C_i}$" ID="ID_422212615" CREATED="1594989516082" MODIFIED="1594989580272"/>
 </node>
 </node>
-<node TEXT="静电场的能量" POSITION="right" ID="ID_1340629911" CREATED="1594989704693" MODIFIED="1594992188825">
+<node TEXT="静电场的能量" POSITION="left" ID="ID_1340629911" CREATED="1594989704693" MODIFIED="1594992188825">
 <edge COLOR="#007c7c"/>
 <node TEXT="充电电容器的能量" ID="ID_285443388" CREATED="1594992189435" MODIFIED="1594992210634">
 <node TEXT="\latex $W_c=\frac{1}{2}CU^2$" ID="ID_1693922203" CREATED="1594992211248" MODIFIED="1594992272888">
