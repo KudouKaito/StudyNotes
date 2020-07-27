@@ -31,18 +31,18 @@ P111
 - 方法1. 代入法  
 - 方法2. 拉格朗日乘数法  
 就相当于隐含数求导  
-在条件$\phi=0$下函数z=f(x,y)的极值  
-$\frac{dy}{dx}=-\frac{phi_x}{phi_y}$  
-$f_x-f_y\frac{\phi_x}{\phi_y}=0$  
-记$\frac{f_x}{\phi_x}=\frac{f_y}{\phi_y}=-\lambda$  
+在条件$\varphi=0$下函数z=f(x,y)的极值  
+$\frac{dy}{dx}=-\frac{\varphi_x}{\varphi_y}$  
+$f_x-f_y\frac{\varphi_x}{\varphi_y}=0$  
+记$\frac{f_x}{\varphi_x}=\frac{f_y}{\varphi_y}=-\lambda$  
 
 极值必须满足:  
 等下, 为了方便记忆, 先引入辅助函数  
-引入辅助函数拉格朗日函数$L=f(x,y)+\lambda\phi(x,y)$  
+引入辅助函数拉格朗日函数$L=f(x,y)+\lambda\varphi(x,y)$  
 则极值点满足:
 $L_x=0$  
 $L_y=0$  
-$L_{\lambda}=0$  
+$L_{\lambda}=0$(就是$\varphi=0$)  
 解方程组  
 仍然用A=fxx来判断极大值还是极小值  
 - 推广: 三元函数  

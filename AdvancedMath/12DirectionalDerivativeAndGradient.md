@@ -2,7 +2,7 @@
 ## 方向导数  
 f延l的方向导数:  
 $$\frac {\partial f}{\partial l}\mid_{(x_0,y_0,z_0)}=\lim_{t→0}\frac {f(x_0+tcos\alpha,y_0+tcos\beta,z_0+tcos\gamma)-f(x_0,y_0,z_0)}{t}=f_xcos\alpha+f_ycos\beta+f_zcos\gamma$$
-可看作**偏导数**与**方向余弦**的乘积之和,也可以看作**法向量**与**单位方向向量**的乘积
+可看作**偏导数**与**方向余弦**的乘积之和,也可以类似看作~~法向量~~**梯度**与**单位方向向量**的乘积
 
 作业   
 P111  
@@ -24,8 +24,8 @@ $$\frac {\partial f}{\partial l}\mid_{(x_0,y_0,z_0)}=f_xcos\alpha+f_ycos\beta+f_
 夹角直角方向导数为0  
 夹角钝角以-gradf为直径  
 ### 梯度的几何意义  
-方向:方向导数增加最快时的方向  
-大小:方向导数增加最快时的大小  
+方向:方向导数最大的方向  
+大小:方向导数最大时的大小  
 
 作业  
 P111  

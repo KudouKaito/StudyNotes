@@ -1,12 +1,15 @@
 # 第六节 多元函数微分学的几何应用  
 ## 一.一元向量值函数及其导数  
 引入 空间曲线${\Gamma}$的参数方程  
-一元向量值函数:$\vec{r}=x\vec{i}+y\vec{j}+z\vec{k}=\vec{r}=\phi(t)\vec{i}+\psi(t)\vec{j}+omega(t)\vec{k}=(\phi(t), \psi(t), \omega(t))$  
+一元向量值函数:$\vec{r}=x\vec{i}+y\vec{j}+z\vec{k}=\vec{r}=\varphi(t)\vec{i}+\psi(t)\vec{j}+\omega(t)\vec{k}=(\varphi(t), \psi(t), \omega(t))$  
 - 一元向量值函数的几何意义: 轨迹径失
 ### 极限  
+各坐标分别极限
 ### 连续
 ### 导数  
+各坐标分别对t求导
 ### 导数几何意义  
+轨迹切线  
 
 
 
@@ -37,13 +40,16 @@ F,G的\有对各个变量的连续偏导数
 
 ## 三.曲面的切平面与法线  
 光滑曲面$\Sigma$:F(x,y,z)=0  
-在曲面上取一条曲线  
+在曲面上取一条曲线$x=\phi(t),y=\psi(t),z=\omega(t)$  
 切平面：所有切线组成的平面  
 法向量：垂直于切平面的向量, 即所有切线的共同垂直向量  
-切平面方程: $F_x\phi'(t)+F_y\psi'(t)+F_z\omega'(t)=0$  
-因为$\phi\psi\omega$是抽象函数,由此可以知所有切线都垂直于$(F_x,F_y,F_z)$  
-切向量方程: $\Tau=(\phi'(t),\psi'(t),F_z\omega'(t))$  
-法向量: $(F_x,F_y,F_z)$
+曲线上的点都在平面上,所以$F(\phi(t),\psi(t),\omega(t))=0$  
+对t求导:$F_x\phi'(t)+F_y\psi'(t)+F_z\omega'(t)=0$  
+因为$\phi\psi\omega$是抽象函数,由此可以知所有切线都垂直于$(F_x,F_y,F_z)$(切平面法向量)  
+
+所以  
+切平面方程: $F_x(x-x_0)+F_y(y-y_0)+F_z(z-z_0)=0$  
+法向量: $(F_x,F_y,F_z)$  
 法线方程——点向式方程
 
 

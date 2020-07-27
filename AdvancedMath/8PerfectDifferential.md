@@ -19,7 +19,10 @@ A,B,C为偏导数
 必要条件:  
 偏导数存在  
 函数连续  
-$$\lim{\frac{\Delta{z}-dz}}{\rho}=0$$
+$$\lim{\frac{\Delta{z}-dz}{\rho}}=0$$
+
+$$\rho=\sqrt{x^2+y^2}$$
+
 $$\Delta{z}=f(x_0+\Delta{x},y_0+\Delta{y})$$
 
 
@@ -30,6 +33,6 @@ $$\Delta{z}=f(x_0+\Delta{x},y_0+\Delta{y})$$
 ### 误差分析
 绝对误差等于各偏导数的绝对值乘以各绝对分误差  
 相对误差等于绝对误差与函数值z本身的商  
-  
+
 作业P77  
 1(3)38

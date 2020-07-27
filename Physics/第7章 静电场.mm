@@ -3,7 +3,7 @@
 <node TEXT="第7章 静电场" FOLDED="false" ID="ID_444648297" CREATED="1594801069451" MODIFIED="1594801430456" STYLE="oval">
 <font SIZE="18"/>
 <hook NAME="MapStyle" zoom="2.0">
-    <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" fit_to_viewport="false" show_icon_for_attributes="true" show_note_icons="true"/>
+    <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" show_icon_for_attributes="true" show_note_icons="true" fit_to_viewport="false"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24.0 pt">
@@ -231,7 +231,7 @@
 <node TEXT="\latex $w_e=\frac{1}{2}\vec{D}{\cdot}\vec{E}$" ID="ID_1092308989" CREATED="1594992953999" MODIFIED="1594993019245"/>
 </node>
 <node TEXT="电场的能量" ID="ID_439707540" CREATED="1594993380720" MODIFIED="1594993390622">
-<node TEXT="\latex $W_c=\int_V{w_cdV}=\int_V{\frac{1}{2}\epsilon E^2dV}$" ID="ID_349629262" CREATED="1594993391335" MODIFIED="1594993460523"/>
+<node TEXT="\latex $W_c=\int_V{w_cdV}=\int_V{\frac{1}{2}\varepsilon E^2dV}$" ID="ID_349629262" CREATED="1594993391335" MODIFIED="1595057980713"/>
 </node>
 </node>
 </node>
