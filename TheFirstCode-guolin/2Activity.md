@@ -36,7 +36,7 @@ Activity类中定义了7中回调方法。
 #### 生命周期示意图  
 ![ActivityLifecycle_CN](Image/ActivityLifecycle_CN.gif)
 ![ActivityLifecycle_EN](Image/ActivityLifecycle_EN.gif)
-#### onStart和onRestert的区别  
+#### onStart和onRestart的区别  
 onRestart()在Destory后在启动程序的情况下**不会启动**  
 目前知道两种情况只启动onStart()不启动onRestart():  
 1. 刚启动程序的时候  
