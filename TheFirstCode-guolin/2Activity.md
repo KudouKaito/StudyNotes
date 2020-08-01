@@ -86,7 +86,7 @@ where in `Head First Android book` it is stated that:
 ### standerd(default)  
 不管这个活动是否已经存在栈中,每一次启动都会创建一个新的实例  
 ### singleTop  
-当活动不再栈顶时,启动活动会创建新的实例;当活动在栈顶时,启动活动才会创建新的实例.  
+当活动不在栈顶时,启动活动会创建新的实例;当活动在栈顶时,启动活动才会创建新的实例.  
 也就是说,自己启动自己没啥反应(Pause在Resume一下);其他活动启动它和standerd一样会创建一个新的实例.  
 可以防止重新创建栈顶活动.  
 ### singleTask  
