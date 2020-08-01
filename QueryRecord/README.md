@@ -27,3 +27,7 @@ Scanf输入多个用逗号隔开的字符串
 
 # 2020年 07月 05日 星期日 16:55:30 CST
 原来fcitx可以自动检测输入问题fcitx-diagnose,太强了  
+
+# Sat 01 Aug 2020 11:18:25 AM CST
+如何获取i3config里面需要的窗口CLASS?  
+用xprop可以获取到CLASS,用xwininfo可以获取到tittle  
