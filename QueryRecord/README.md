@@ -67,3 +67,18 @@ Xming, VcXSrv 无法使用, WSL2无法使用GUI图形截面
 到防火墙里面设置允许程序越过防火墙  
 https://blog.csdn.net/Alisebeast/article/details/106680267
 
+# Sat Jan  2 03:55:17 PM CST 2021
+Linux 权限表示, 数字权限, chmod  
+## 权限
+形式: drwxrwxrwx
+前面一位为特殊模式位, 后面三位为一组,分别对应着u(user), g(group), o(others)的权限
+## 数字权限: 
+形式:如755  
+将d,rwxrwxrwx用二进制表示则可得到三组三位二进制数:不知道,111,111,111.转化成十进制数即可得到X777,其中特殊模式位通常省略掉  
+数字权限有四位, 最高位可以省略  
+后三位分别对应这ugo的权限  
+https://blog.csdn.net/stevenchen1989/article/details/104257545
+## chmod
+chmod [ugoa][+-=][rwx] [-R] 文件
+如`chmod u+w,g-w,o-w 文件`
+
