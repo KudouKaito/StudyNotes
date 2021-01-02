@@ -65,4 +65,5 @@ vim彩蛋
 # Sat Jan  2 02:49:18 PM CST 2021
 Xming, VcXSrv 无法使用, WSL2无法使用GUI图形截面  
 到防火墙里面设置允许程序越过防火墙  
+https://blog.csdn.net/Alisebeast/article/details/106680267
 
