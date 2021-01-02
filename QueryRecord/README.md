@@ -31,3 +31,38 @@ Scanf输入多个用逗号隔开的字符串
 # Sat 01 Aug 2020 11:18:25 AM CST
 如何获取i3config里面需要的窗口CLASS?  
 用xprop可以获取到CLASS,用xwininfo可以获取到tittle  
+
+# Sat Dec 19 04:35:35 PM CST 2020
+vim如何使用指定编码打开文件  
+:e ++enc=GB18030
+或者
+```bash
+vim file.txt -c "e ++enc=GB18030"
+```
+https://www.jianshu.com/p/36286fa7a9ed
+
+# Sat Dec 26 04:36:27 PM CST 2020
+latex平均数怎么打, X上面有一杠, Xbar  
+\overline{}长线或者\bar{}断杠
+
+latex如何打~  
+\sim  
+
+latex求和符号上下标如何在正上方正下方
+\displaystyle\sum  
+
+
+# Sun Dec 27 09:49:49 AM CST 2020
+adb查看手机当前应用包名
+adb shell dumpsys window w |findstr \/ |findstr name=
+
+# Sun Dec 27 09:50:12 PM CST 2020
+vim彩蛋
+:h holy-grail
+:h 42
+:h!
+
+# Sat Jan  2 02:49:18 PM CST 2021
+Xming, VcXSrv 无法使用, WSL2无法使用GUI图形截面  
+到防火墙里面设置允许程序越过防火墙  
+

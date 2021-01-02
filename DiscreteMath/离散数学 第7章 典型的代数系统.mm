@@ -1,0 +1,194 @@
+<map version="freeplane 1.8.0">
+<!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
+<node TEXT="离散数学 第7章 典型的代数系统" FOLDED="false" ID="ID_970706218" CREATED="1603634398522" MODIFIED="1603634445664" STYLE="oval">
+<font SIZE="18"/>
+<hook NAME="MapStyle" zoom="2.0">
+    <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" fit_to_viewport="false"/>
+
+<map_styles>
+<stylenode LOCALIZED_TEXT="styles.root_node" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24.0 pt">
+<font SIZE="24"/>
+<stylenode LOCALIZED_TEXT="styles.predefined" POSITION="right" STYLE="bubble">
+<stylenode LOCALIZED_TEXT="default" ICON_SIZE="12.0 pt" COLOR="#000000" STYLE="fork">
+<font NAME="SansSerif" SIZE="10" BOLD="false" ITALIC="false"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="defaultstyle.details"/>
+<stylenode LOCALIZED_TEXT="defaultstyle.attributes">
+<font SIZE="9"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="defaultstyle.note" COLOR="#000000" BACKGROUND_COLOR="#ffffff" TEXT_ALIGN="LEFT"/>
+<stylenode LOCALIZED_TEXT="defaultstyle.floating">
+<edge STYLE="hide_edge"/>
+<cloud COLOR="#f0f0f0" SHAPE="ROUND_RECT"/>
+</stylenode>
+</stylenode>
+<stylenode LOCALIZED_TEXT="styles.user-defined" POSITION="right" STYLE="bubble">
+<stylenode LOCALIZED_TEXT="styles.topic" COLOR="#18898b" STYLE="fork">
+<font NAME="Liberation Sans" SIZE="10" BOLD="true"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="styles.subtopic" COLOR="#cc3300" STYLE="fork">
+<font NAME="Liberation Sans" SIZE="10" BOLD="true"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="styles.subsubtopic" COLOR="#669900">
+<font NAME="Liberation Sans" SIZE="10" BOLD="true"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="styles.important">
+<icon BUILTIN="yes"/>
+</stylenode>
+</stylenode>
+<stylenode LOCALIZED_TEXT="styles.AutomaticLayout" POSITION="right" STYLE="bubble">
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level.root" COLOR="#000000" STYLE="oval" SHAPE_HORIZONTAL_MARGIN="10.0 pt" SHAPE_VERTICAL_MARGIN="10.0 pt">
+<font SIZE="18"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,1" COLOR="#0033ff">
+<font SIZE="16"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,2" COLOR="#00b439">
+<font SIZE="14"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,3" COLOR="#990000">
+<font SIZE="12"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,4" COLOR="#111111">
+<font SIZE="10"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,5"/>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,6"/>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,7"/>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,8"/>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,9"/>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,10"/>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,11"/>
+</stylenode>
+</stylenode>
+</map_styles>
+</hook>
+<hook NAME="AutomaticEdgeColor" COUNTER="1" RULE="ON_BRANCH_CREATION"/>
+<node TEXT="7.1 半群和群" POSITION="right" ID="ID_1404499772" CREATED="1603634461166" MODIFIED="1603634492640">
+<edge COLOR="#ff0000"/>
+<node TEXT="半群" ID="ID_325717652" CREATED="1603635171376" MODIFIED="1603635202220">
+<node TEXT="定义 7.1" ID="ID_910738151" CREATED="1603635227293" MODIFIED="1603635235675">
+<node TEXT="代数系统" ID="ID_159605383" CREATED="1603635252990" MODIFIED="1603635261724"/>
+<node TEXT="满足结合律" ID="ID_1138958556" CREATED="1603635236172" MODIFIED="1603636257747">
+<font BOLD="true"/>
+</node>
+</node>
+<node TEXT="性质" ID="ID_893026199" CREATED="1603635297448" MODIFIED="1603635302374">
+<node TEXT="1" OBJECT="java.lang.Long|1" ID="ID_1697455691" CREATED="1603635302488" MODIFIED="1603635305265">
+<node TEXT="有限半群中必含有幂等元" ID="ID_438367063" CREATED="1603635305588" MODIFIED="1603635323642"/>
+</node>
+<node TEXT="2" OBJECT="java.lang.Long|2" ID="ID_493584851" CREATED="1603635328036" MODIFIED="1603635329621">
+<node TEXT="如果f为半群&lt;S, *&gt;到代数系统&lt;T, ⚬&gt;的同态映射, 则&lt;f(S), ⚬&gt;也是半群" ID="ID_1523152229" CREATED="1603635357045" MODIFIED="1603635744057"/>
+</node>
+</node>
+<node TEXT="定义7.2(子半群)" ID="ID_1645407447" CREATED="1606010929547" MODIFIED="1606010945581"/>
+<node TEXT="定理7.1(子半群)" ID="ID_537289674" CREATED="1603635829967" MODIFIED="1603635948637">
+<node TEXT="对于半群&lt;S, *&gt;, 如果非空集合B⊆S且运算&quot;*&quot;在B上是封闭的, 则代数系统&lt;B, *&gt;为半群&lt;S, *&gt;的子半群" ID="ID_1276574700" CREATED="1603635839848" MODIFIED="1603635937580"/>
+</node>
+<node TEXT="独异点(含幺半群)" ID="ID_1579180059" CREATED="1603635963853" MODIFIED="1603636102242">
+<node TEXT="定义7.3" ID="ID_900880208" CREATED="1603636005964" MODIFIED="1606010920672">
+<node TEXT="代数系统" ID="ID_1032377025" CREATED="1603636027705" MODIFIED="1603636031360"/>
+<node TEXT="满足结合律" ID="ID_1620794344" CREATED="1603636031715" MODIFIED="1603636036840"/>
+<node ID="ID_730591502" CREATED="1603636241820" MODIFIED="1603636247247"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      含有幺元
+    </p>
+  </body>
+</html>
+</richcontent>
+<font BOLD="true"/>
+</node>
+</node>
+<node TEXT="定义7.4(子独异点)" ID="ID_1302801072" CREATED="1606010956731" MODIFIED="1606010970438">
+<node TEXT="幺元必须相同" ID="ID_135375786" CREATED="1606010977515" MODIFIED="1606010991709"/>
+</node>
+<node TEXT="群" ID="ID_552556555" CREATED="1606010428603" MODIFIED="1606010433808">
+<node TEXT="定义7.5" ID="ID_1886221147" CREATED="1606010434850" MODIFIED="1606010924332">
+<node TEXT="代数系统" ID="ID_779337471" CREATED="1606010448065" MODIFIED="1606010455599"/>
+<node TEXT="满足结合律" ID="ID_708924786" CREATED="1606010456006" MODIFIED="1606010461273"/>
+<node TEXT="含有幺元" ID="ID_1773892803" CREATED="1606010461780" MODIFIED="1606010466738"/>
+<node TEXT="所有元素存在逆元" ID="ID_618568456" CREATED="1606010467024" MODIFIED="1606010494019">
+<font BOLD="true"/>
+</node>
+</node>
+<node TEXT="定义7.6(有限群与无限群)" ID="ID_1425094205" CREATED="1606011006159" MODIFIED="1606011939400"/>
+<node TEXT="定义7.7(阶)" ID="ID_1915837867" CREATED="1606011951546" MODIFIED="1606012022791"/>
+<node TEXT="性质" ID="ID_1054733423" CREATED="1606012199364" MODIFIED="1606012205427">
+<node TEXT="1" OBJECT="java.lang.Long|1" ID="ID_1347597619" CREATED="1606012205739" MODIFIED="1606012207648">
+<node TEXT="幺元是唯一的等幂元" ID="ID_413992737" CREATED="1606012207812" MODIFIED="1606012222639"/>
+</node>
+<node TEXT="2" OBJECT="java.lang.Long|2" ID="ID_1157802842" CREATED="1606012223644" MODIFIED="1606012225026">
+<node TEXT="G中至少有2个元素时, 不存在零元" ID="ID_885367225" CREATED="1606012225157" MODIFIED="1606012351919"/>
+</node>
+<node TEXT="3" OBJECT="java.lang.Long|3" ID="ID_827956027" CREATED="1606012468750" MODIFIED="1606012473686">
+<node TEXT="如果a*b=b或者b*a=b, 则a是关于运算&quot;*&quot;的幺元(两边乘以逆元)" ID="ID_1442619418" CREATED="1606012475444" MODIFIED="1606012588016"/>
+</node>
+<node TEXT="4" OBJECT="java.lang.Long|4" ID="ID_1527124857" CREATED="1606013311412" MODIFIED="1606013315168">
+<node TEXT="任一元素都是可消去元" ID="ID_1038152580" CREATED="1606013315418" MODIFIED="1606013329335"/>
+</node>
+<node TEXT="5" OBJECT="java.lang.Long|5" ID="ID_1615352743" CREATED="1606013331168" MODIFIED="1606013332872">
+<node TEXT="\latex $(a*b)^{-1}=b^{-1}*a^{-1},(a^n)^{-1}=(a^{-1})^n$\\(不能反过来$(a*b)^{-1}*a*b=e$,将两边依次乘a和b的逆元即可)" ID="ID_329679958" CREATED="1606013333014" MODIFIED="1606016045877"/>
+</node>
+<node TEXT="6" OBJECT="java.lang.Long|6" ID="ID_1629656204" CREATED="1606016231393" MODIFIED="1606016255287">
+<node TEXT="方程a*x=b,y*a=b都有解却有唯一解" ID="ID_1979198297" CREATED="1606016255648" MODIFIED="1606016285557"/>
+</node>
+<node TEXT="7" OBJECT="java.lang.Long|7" ID="ID_59970988" CREATED="1606016286998" MODIFIED="1606016289817">
+<node TEXT="\latex $|a|=|a^{-1}|$" ID="ID_1730923231" CREATED="1606016289927" MODIFIED="1606016309630"/>
+</node>
+<node TEXT="8" OBJECT="java.lang.Long|8" ID="ID_1166416102" CREATED="1606016320613" MODIFIED="1606016322211">
+<node TEXT="有限群的每个元素都是有限阶元素, 且其阶不超过群的阶数|G|" ID="ID_1067382430" CREATED="1606016322350" MODIFIED="1606016356868"/>
+</node>
+<node TEXT="9" OBJECT="java.lang.Long|9" ID="ID_229043499" CREATED="1606016360023" MODIFIED="1606016361438">
+<node TEXT="\latex 对于群G中阶数为r的元素a, 那么$a^n=e$当且仅当r整除n" ID="ID_206282086" CREATED="1606016362197" MODIFIED="1606016749208"/>
+</node>
+</node>
+<node TEXT="定义7.8(子群H≤G)" ID="ID_299479794" CREATED="1606017237810" MODIFIED="1606017659203">
+<node TEXT="分类" ID="ID_751524159" CREATED="1606017479659" MODIFIED="1606017492704">
+<node TEXT="平凡子群" ID="ID_541590842" CREATED="1606017493008" MODIFIED="1606017498006">
+<node TEXT="&lt;{e},*&gt;,&lt;{G,*}&gt;" ID="ID_1087801115" CREATED="1606017506233" MODIFIED="1606017542114"/>
+</node>
+<node TEXT="非平凡子群" ID="ID_199272231" CREATED="1606017498134" MODIFIED="1606017505392"/>
+</node>
+<node TEXT="性质" ID="ID_1752173049" CREATED="1606017242887" MODIFIED="1606017247756">
+<node TEXT="1" OBJECT="java.lang.Long|1" ID="ID_1748826513" CREATED="1606017345347" MODIFIED="1606017346704">
+<node TEXT="必要条件" ID="ID_696847625" CREATED="1606018180930" MODIFIED="1606018186591">
+<node TEXT="同幺元" ID="ID_92841946" CREATED="1606017347012" MODIFIED="1606017692935"/>
+</node>
+</node>
+<node TEXT="2" OBJECT="java.lang.Long|2" ID="ID_500781795" CREATED="1606017693940" MODIFIED="1606017694950">
+<node TEXT="充分必要条件" ID="ID_858030006" CREATED="1606017695326" MODIFIED="1606017717993">
+<node TEXT="H为G的非空子集" ID="ID_1493212028" CREATED="1606017927543" MODIFIED="1606017937418"/>
+<node TEXT="①同幺元" ID="ID_211640045" CREATED="1606017718340" MODIFIED="1606017737834"/>
+<node TEXT="②a*b∈H(封闭)" ID="ID_1104234627" CREATED="1606017738535" MODIFIED="1606017899477"/>
+<node TEXT="③有逆元" ID="ID_1719177075" CREATED="1606017901221" MODIFIED="1606017919011"/>
+</node>
+</node>
+<node TEXT="3" OBJECT="java.lang.Long|3" ID="ID_909454376" CREATED="1606017940097" MODIFIED="1606017941721">
+<node TEXT="充分必要条件" ID="ID_1822457813" CREATED="1606017941887" MODIFIED="1606017955629">
+<node TEXT="H为G的非空子集" ID="ID_862352325" CREATED="1606017927543" MODIFIED="1606017937418"/>
+<node TEXT="\latex ∀a,b∈H,则$a*b^{-1}∈H$" ID="ID_1019314648" CREATED="1606018012350" MODIFIED="1606018096401"/>
+</node>
+</node>
+<node TEXT="4" OBJECT="java.lang.Long|4" ID="ID_495684177" CREATED="1606018110329" MODIFIED="1606018112852">
+<node TEXT="充分条件" ID="ID_119145601" CREATED="1606018113486" MODIFIED="1606018177643">
+<node TEXT="H为G的有限非空子集" ID="ID_382023424" CREATED="1606018190337" MODIFIED="1606018199564"/>
+<node TEXT="封闭(有限封闭一定有幺元和逆元)" ID="ID_492487747" CREATED="1606018203478" MODIFIED="1606018280638"/>
+</node>
+</node>
+<node TEXT="5" OBJECT="java.lang.Long|5" ID="ID_8537619" CREATED="1606018477308" MODIFIED="1606018479726">
+<node TEXT="K阶子群" ID="ID_660557476" CREATED="1606018639911" MODIFIED="1606018682043"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</map>
