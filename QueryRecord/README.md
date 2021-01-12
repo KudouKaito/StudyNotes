@@ -82,3 +82,33 @@ https://blog.csdn.net/stevenchen1989/article/details/104257545
 chmod [ugoa][+-=][rwx] [-R] 文件
 如`chmod u+w,g-w,o-w 文件`
 
+
+# Mon Jan 11 04:47:09 PM CST 2021
+504 Gateway Time-out
+修改proxy_read_timeout
+https://www.cnblogs.com/linjiqin/p/11858127.html
+
+# Tue Jan 12 06:53:32 PM CST 2021
+vim正则匹配替换式字中的某个内容
+/zs          指明匹配由此开始 (:help  / /zs )
+/ze          指明匹配到此为止 (:help  / /ze )
+
+
+
+# Tue Jan 12 07:03:28 PM CST 2021
+正则只匹配某些字符之间的文本, 而不匹配这些字符  
+`(?<=the start).*?(?=the end)`   
+```text
+(?=pattern) 正向先行断言，代表字符串中的一个位置，紧接该位置之后的字符序列能够匹配 pattern。例如对 "a regular expression" 这个字符串，要想匹配 regular 中的 re，但不能匹配 expression 中的 re，可以用 re(?=gular)，该表达式限定了 re 右边的位置，这个位置之后是 gular，但并不消耗 gular 这些字符。
+(?<=pattern) 正向后行断言，代表字符串中的一个位置，紧接该位置之前的字符序列能够匹配 pattern。
+除此之外还有负向的（把=换成!），表示不匹配pattern。
+```
+https://www.cnblogs.com/exmyth/p/8796954.html  
+
+
+# Tue Jan 12 07:15:16 PM CST 2021
+正则表达式(括号)[中括号]{大括号}的区别  
+括号表示分组, 多少个括号就匹配出多少个变量$1,$2,$3...
+括号()就表示处理整个整体的意思, 就正常的括号, 类似markdown中的{}  
+https://www.cnblogs.com/hjbky/p/9512022.html  
+
