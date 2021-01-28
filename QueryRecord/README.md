@@ -112,3 +112,250 @@ https://www.cnblogs.com/exmyth/p/8796954.html
 括号()就表示处理整个整体的意思, 就正常的括号, 类似markdown中的{}  
 https://www.cnblogs.com/hjbky/p/9512022.html  
 
+
+# polkit 的使用
+如果要像KDE运行gparted一样申请权限而不用sudo, 那么就要用到polkit了, 另外, 一定要有一款图形化的polkit库, 不然似乎就运行不了图形软件
+https://wiki.archlinux.org/index.php/Polkit_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
+
+# 全球安卓OS及模拟器汇总总贴(超过30个) 最高安卓11 01.07/2021更新
+```Text
+
+Android x86安装交流群：1044132520
+白嫖社(一堆破解软件和免费梯子)：859142087
+下列OS部分需要梯子才能下载，请进(白嫖社)群，在群文件中免费下载梯子来下载文件；
+如果有关于Android x86的安装与使用等问题，欢迎进Android x86安装交流群问；
+本贴会实时更新，详细更新日志请看二楼。
+活跃更新中的OS：
+Bliss OS(推荐，来自美国的)
+这个是本帖搜集的所有OS中，运行速度最快的，也可能是唯一支持Vulkan的，兼容性是只兼容较新设备，UI不是仿Windows10的，可能刚上手会有些不习惯，但是安装没有那么方便，为了字数不要太多，教程我就不发了，下面有英文版的链接，可以到百度或有道进行网页翻译，理论上其他OS也通用。
+官网(英文)：https://www.blissos.org/
+BlissOS14(安卓11内测版)下载(英文)：https://sourceforge.net/projects/blissos-dev/files/Android-Generic/PC/bliss/alpha/
+
+BlissOS12英特尔系列版(安卓10公测版)下载(英文)：https://sourceforge.net/projects/blissos-dev/files/Android-Generic/PC/bliss/
+BlissOS12AMD平台专版(安卓10公测版)下载(英文)：https://sourceforge.net/projects/blissos-dev/files/merkaba/amd/
+BlissOS11(安卓9正式版)下载(英文)：https://sourceforge.net/projects/blissos-x86/files/Official/bleeding_edge/Generic%20builds%20-%20Pie/
+Blissos Lite(安卓10精简公测版)下载(英文)：https://sourceforge.net/projects/blissos-dev/files/Lite/
+BlossOS11(Surface专版),Pro3/2请使用通用版本：https://sourceforge.net/projects/blissos-x86/files/Official/bleeding_edge/Surface%20IPTS%20builds%20-%20Pie/
+上方部分下载链接有两个或多个相同版本，需注意文件名里的时间，若不一样，说明旧版本存在BUG，请选择较新版本，相同的话，就是一个是有GMS(谷歌服务框架)，另一个没有，请注意文件名选择需要的版本下载哦。
+BlissOS7.2(64位)：https://sourceforge.net/projects/blissos-x86/files/Official/Nougat%20stable%20-%20Unsupported/Bliss-v7.2-android_x86_64-OFFICIAL-20171014-1552_k4.4.iso/download
+7.2版本内核版本为4.4，4.4版本的内核无需SSE4.2，即可运行64为系统，但是有限制CPU必须为64位。
+安卓9(32位)测试版下载(英文)：https://sourceforge.net/projects/blissos-x86/files/Official/bleeding_edge/Experimental%20-%2032%20bit%20%28x86%29%20builds%20-%20Pie/
+32位暂时只有安卓9版本，但无64位CPU限制，适用于较老硬件，不建议64位PC安装32位版本。
+BlissOS11官方贴(3楼有更新记录)(英文)：https://forum.xda-developers.com/bliss-roms/bliss-roms-development/bliss-os-pie-beta-preview-t3855917
+BlissOS12测试贴(2楼有更新日志)(英文)：https://forum.xda-developers.com/android/software/bliss-os-x86-pc-s-12-x-development-t4004419
+BlissOS14内测贴(含更新日志)(英文)：https://forum.xda-developers.com/t/android-generic-project-pc-gsi-build-automation-toolkit.4132031/post-84148333
+安装指南和用户手册(英文)：https://docs.blissroms.com/
+以上链接为持续更新的英文链接，下载请选择最新版本，建议使用迅雷下载，否则可能因外服资源影响下载过慢或无法下载，下载速度较慢的朋友可以使用下方链接下载，高速下载链接更新不及时，敬请谅解，但仍可安装后进行更新哦。
+安卓10(测试版)高速下载贴：http://bbs.phoenixstudio.org/cn/read.php?tid=29954(感谢我是米粉7的提供)
+PhoenixOS Darkmatter(推荐，外国修改版凤凰系统)
+这是另外一个外国大佬为64位支持SSE4.2CPU专门定制修改的凤凰系统，基于凤凰系统，进行修改，并且持续更新，支持系统内OTA升级，Beta版本刚刚更新，改进非常多。
+社区官网(英文)：https://supreme-gamers.com/resources
+国内交流Q群：895450984
+介绍视频：https://www.youtube.com/watch?v=RlMzv8OgrcE
+下载：https://mega.nz/file/4M1imZbT#BzvEZIPFUvrIrU2pz1GheIL9CAgNZ-OyC8yIigGGsd4
+4.7BETA-2版本官方贴：https://supreme-gamers.com/resources/phoenixos-darkmatter-supercharged-for-gamers.2/
+PS：更多下载方式，请看第241楼，有(EXO4.7 BETA-2版本)官方提供的所有链接，及文档说明
+安装教程：https://www.youtube.com/watch?v=UEVuOKyk7ds
+4.7BETA-2版本完整更新日志：https://supreme-gamers.com/resources/phoenixos-darkmatter-supercharged-for-everyone.2/
+Carbon ROM(兼容新硬件)
+基于安卓10，5.8内核，兼容最新10代平台。
+官网：https://carbonrom.org/ (感谢x86群的群友。的提供)
+下载：https://sourceforge.net/projects/blissos-dev/files/Android-Generic/PC/carbon/
+PhoenixOS-ROC(不推荐,外国修改版64位凤凰系统)
+这是外国大佬为64位支持SSE4.2CPU专门定制修改的凤凰系统，基于凤凰系统，进行修改，并且持续更新，支持系统内OTA升级，推荐这个，比楼下更专业更好用，分多个版本而且更新更快，安装教程在外国贴里有，但需要进行翻译。
+常规版单应用运行速度不如游戏版，但无游戏版同时开多个窗口运行卡慢的问题，游戏版针对游戏，对单应用资源分配较多，不适合多任务运行，精简版去掉了许多系统应用并且对系统还进行而外精简化处理，跟适合性能较差的电脑。
+必须挂梯子，然后要加载好才能点，人机验证上方还会有广告，验证完后点下载会先下载，下载后应该是ZIP格式的，打开会有一个EXE，按提示操作会获得KEY，输入到刚刚下载的网页里，就能下载了。
+标准版下载(英文)：http://skip.az/ROCFullv2
+常规版海外贴(英文)：http://bbs.phoenixstudio.org/en/showthread.php?tid=13388
+游戏版下载(英文)：http://www.patreon.com/posts/phoenix-os-roc-31116233
+游戏版海外贴(英文)：http://bbs.phoenixstudio.org/en/showthread.php?tid=45747
+精简版下载(英文)：http://www.patreon.com/posts/phoenix-os-roc-31058308
+精简版海外贴(英文)：http://bbs.phoenixstudio.org/en/showthread.php?tid=457355
+Lineage OS(不推荐)
+这个OS不太好用，但是对于新硬件的兼容性很高(支持10代平台)，基于安卓10版本，浓浓Android x86原版的外貌，不支持应用窗口化，应用兼容性极差，不推荐使用。
+官网：https://www.lineageos.org/
+64位下载：https://sourceforge.net/projects/blissos-dev/files/Android-Generic/PC/lineage/LineageOS_v17.1-android_x86_64-202008292133_k-k4.19.122-ax86-ga-rmi_m-lineage-17.1_dgc-q-x86-generic_ld-2.4.102-q-x86_dg-lineage-17.1_dh-lineage-17.1_mg-lineage-17.1_gms_cros-hd_cros-wv.iso/download
+32位下载：https://sourceforge.net/projects/blissos-dev/files/Android-Generic/PC/lineage/LineageOS_v17.1-android_x86_64-202009091904_k-kernel-5.8-si-next-rmi_m-lineage-17.1_dgc-q-x86-generic_gms_cros-hd_cros-wv.iso/download
+AndEX(不推荐)
+这个OS也不好用，安卓9版本，浓浓Android x86原版的外貌，无游戏助手，区别好像就是无谷歌，不支持应用窗口化，只不过内核升级过了，外国售价9美元，也就是目前的63块人民币，不推荐使用，下面是免费下载，有人购买分享的，目前官方只有64位版本。
+官网：https://www.andex.net/
+下载：https://pan.baidu.com/s/1z2mMh33wM6fe_crR7cTM5g(感谢7777777的提供)
+安装教程：http://bbs.phoenixstudio.org/cn/read.php?tid=28097&fid=12(感谢7777777的提供)
+
+缓慢或停更的OS:
+Dante Official(推荐凤凰系统修改版）
+这个站点专门修改第三方OS，目前已修改了凤凰系统和PrimeOS，所有版本都是安卓7.1.2的，版本号是修改后的修改版本，不是官方原版底包版本号，目前有一段时间没更新了。凤凰系统修改版现已去广告，没装过，不知道怎样，patreon官网和论坛不用梯子，但不和谐官网和下载要梯子，官方贴里还有别的搭配文件可供下载，请选择你下载的版本官方贴，不要下错了。
+patreon官网：https://www.patreon.com/danteofficial(感谢RoyalDevanth的提供)
+不和谐官网：https://discord.gg/jDzyZ3k
+凤凰系统推荐使用2.0版本，2.0是4.19内核(mesa18)；而2.1是4.14内核(mesa17)，会锁30帧，若会替换内核可试2.1。
+凤凰系统2.0_64位官方贴：https://www.patreon.com/posts/phoenix-os-vip-2-35036497
+凤凰系统2.0_64位下载：https://mega.nz/#!bs0XVQCa!TkOZpQUMVvCTbNgscxxFj3vqfnis9WgMFpPADRSszaA
+凤凰系统2.1_64位官方贴：https://www.patreon.com/posts/phoenix-os-vip-2-35036644
+凤凰系统2.1_64位下载：https://mega.nz/#!W58CDK6Y!W59-IovxeGy49R06C7tHVLSPDPKwhMjeBarnMiPz1cs
+凤凰系统1.0_32位官方贴：https://www.patreon.com/posts/phoenix-os-vip-1-33820989
+凤凰系统1.0_32位下载：https://mega.nz/#!Hod0WCKa!Rf93_HvZwZyVqff9dK7wNJwbTZ9SuLt7NhlRH1WguLA
+PrimeOS1.0_64位官方贴：https://www.patreon.com/posts/prime-os-beast-1-33846976
+PrimeOS1.0_64位下载：https://drive.google.com/open?id=1psAf4U78mJ7N7fy4hsIilzSNyKjN_Tqu
+PrimeOS1.0_32位官方贴：https://www.patreon.com/posts/prime-os-beast-1-33825957
+PrimeOS1.0_32位下载：https://mega.nz/#!28NnnYZT!4aiBK35YF9YBxGriEcRM1WOn15RO1Nb4A7JfgUpE_c8
+PrimeOS(不推荐，安卓7.1)
+来自印度的OS,官网也可以下载，版本有区分，介绍在下方，安装不是很方便，而且也不是很好用，甚至已经很长时间没有进行更新了，所以不推荐。
+Mainline版:适用于最新设备的64位版本，支持独显，性能比Standard版强，有SSE4.2无法运行的请使用Standard版
+Standard版:适用于早期的64位有SSE4.2设备，软件兼容性适中，性能没楼上强，不支持独显。
+Classic版(极为不推荐):适用于无SSE4.2的设备,硬件兼容性较强，但不自带Hundini，软件兼容性很差，大部分应用闪退，所以64CPU无SSE4.2推荐使用RemixOS64位，RemixOS的64位版本无SSE4.2限制。
+官网(英文)：https://www.primeos.in/
+下载(英文)：https://primeos.in/download/
+PhoenixOS BR(不推荐，外国修改版32位凤凰系统)
+这是外国大佬为32位无SSE4.2支持CPU专门定制修改的凤凰系统，基于凤凰系统进行重新修改，并且持续更新，支持系统内OTA升级，但是这个系统虽然能玩腾讯游戏，但运行速度不如原版，所以能用RemixOS的还是用RemixOS吧！
+下载: https://pan.baidu.com/s/13uVYaIC8BLgeHksy2d7cnw  提取码: 9p98(感谢轨迹as的提供)
+
+安卓模拟器：
+雷电模拟器(推荐)
+GPU性能强悍，掉帧控制最好，应用兼容性强，多开没有逍遥流畅，偶发卡死(非常少见)，目前版本存在看视频白屏无法观看问题。
+N卡2020.3.17驱动版本445.75升级后，部分游戏出现画面撕裂花屏问题，已在2020.8.17的452.06版本得到解决，更新驱动即可。
+4.0为安卓7.1版本，3.0为安卓5.1版本；4.0的64位为64位的安卓7.1版本，8月7号刚刚正式，性能比32位版本更强！
+官网：https://www.ldmnq.com/
+下载：https://dl.softmgr.qq.com/original/game/ldinst_4.0.45.exe
+x64专版下载：https://dl.softmgr.qq.com/original/game/ldinst-4.0.44.64.exe
+4.0(安卓7.1)更新日记：https://www.ldmnq.com/ld_update_log.html?log=4
+3.0(安卓6.0)版本下载：https://dl.softmgr.qq.com/original/game/ldinst_3.110.0.exe
+3.0(x32)更新日记：https://www.ldmnq.com/ld_update_log.html?log=3
+论坛：https://www.ldmnq.com/forum/
+常见问题：https://www.ldmnq.com/article/130.html?from=indexnav
+逍遥模拟器(推荐)
+总体性能强悍，兼容性强，稳定性强，多开极为流畅，推荐使用，但存在部分游戏加载会先卡0%一会才能动的BUG(较为严重)，测试版需注意版本，若和正式版版本相同请选择正式版，默认为安卓7.1，64位7.1和安卓5.1、4.0在逍遥多开器中创建。
+N卡2020.3.17驱动版本445.75升级后，部分游戏出现画面撕裂花屏问题，已在2020.8.17的452.06版本得到解决，更新驱动即可。
+官网：http://www.xyaz.cn/
+论坛：http://bbs.xyaz.cn/
+下载：https://www.xyaz.cn/download.php?file_name=XYAZ-Setup-7.3.2-ha0e6e6820
+x64专版下载：https://download.microvirt.com/download/game/XXAZ-Installer-gcc1621.exe
+多开版(工作室版)在多开时性能相比原版(个人版)更强，多开(群控)相关功能也更多，但是单开时性能相比原版(个人版)稍弱。
+多开版下载：https://www.xyaz.cn/download.php?file_name=XYAZ-Setup-studio-7.3.2-hac50fd5f7
+测试版：http://bbs.xyaz.cn/thread-19-1-1.html
+更新日记和部分历史版本下载：http://bbs.xyaz.cn/forum.php?mod=viewthread&tid=76
+MUMU模拟器/手游助手(无VT首选)
+流畅度还行，兼容性稳定性也不错，暂不支持多开，需要在设置里进行修改才能流畅，支持Mac，测试版的MUMU手游助手不是很好用，但MUMU手游助手在不开VT下表现极为流畅，推荐无VT或打不开的设备使用。
+官网：http://mumu.163.com/
+助手下载：https://adl.netease.com/d/g/zs/c/gw
+模拟器下载：https://adl.netease.com/d/g/a11/c/gw
+MAC模拟器下载：https://adl.netease.com/d/g/a11/c/mac
+x64专版模拟器下载：https://a11.gdl.netease.com/MuMuInstaller_1.1.1.3_v2.4.11x64_zh-Hans_1609767762.exe
+论坛：http://bbs.mumu.163.com/
+常见问题：http://mumu.163.com/help/
+模拟器更新日记：http://mumu.163.com/20200515/25905_880856.html
+手游助手更新日记：http://mumu.163.com/20200515/25905_880846.html
+夜神模拟器
+界面美观，但不是很流畅，支持MAC，兼容性及稳定性欠佳，偶发卡死问题，多开卡慢和卡死问题很严重，不推荐。
+官网：https://www.yeshen.com/
+下载：https://www.yeshen.com/cn/download/fullPackage
+x64专版下载：https://res06.bignox.com/full/20201204/abedeeb3f0cd4376bb9968a20c554dd2.exe
+MAC版本下载：https://www.yeshen.com/cn/download/fullPackage/mac_fullzip
+论坛：https://bbs.yeshen.com/forum.php
+常见问题：https://www.yeshen.com/faq/
+更新日记和部分历史版本下载：https://www.yeshen.com/blog/version/
+蓝叠模拟器
+老牌模拟器，老引擎，兼容性不错，但速度上差的比较多，多开运行慢但不会卡死，稳定性很高，但因流畅度和其他模拟器差太多，不推荐使用。
+中国版本更新较慢，国际版版本更高，模拟器内不支持更改语言，这里提供的是繁体中文的版本，其它语言在国际服官网右上角可更改。
+官网：www.bluestacks.cn
+下载：https://aliosscdn.bluestacks.cn/client/BlueStacks4Setup.exe
+Beta下载：https://aliosscdn.bluestacks.cn/client/BlueStacksDev.exe
+x64专版下载：https://aliosscdn.bluestacks.cn/client/Bcgp64Setup.exe
+常见问题：https://www.bluestacks.cn/faq.html
+国际版：https://www.bluestacks.com/tw/index.html
+国际版更新计入：https://support.bluestacks.com/hc/zh-tw/articles/360021469391-Release-Notes
+腾讯手游助手(不玩腾讯游戏则不推荐)
+运行速度不佳，容易卡死，CPU/GPU占用率也是十分的高，更新速度很慢，但只兼容腾讯部分游戏的极速引擎表现还行，但部分游戏还是存在掉帧现象，若不是为了过吃鸡过检验，不建议使用。
+官网：https://syzs.qq.com/
+下载：https://s.syzs.qq.com/k_pack_up/6725/b2811225/syzs_installer_1000208831_smzhsy.exe
+论坛：https://bbs.guanjia.qq.com/forum-303-1.html
+遁地模拟器(不推荐)
+运行比较卡慢，兼容性非常差，稳定性欠佳，容易卡死，界面不美观，不推荐使用。
+官网：https://www.ddmnq.com/
+下载：https://www.ddmnq.com/download/ddmnq/dr.exe
+常见问题：https://www.ddmnq.com/news/1
+更新日记和部分历史版本下载：https://www.ddmnq.com/news/20.html
+手游模拟大师(不推荐)
+运行卡慢，兼容性非常差，稳定性不错，界面不美观，不支持多开，不推荐使用。
+官网：http://g.monidashi.cn/
+下载：http://cdn-file-ssl-monidashi.ludashi.com/gamemaster/update/7.1.3575.2185/LDSGameMasterMini_officialwebsite.exe
+常见问题：http://g.monidashi.cn/page/faq
+更新记录：http://g.monidashi.cn/page/updatelog
+
+完全停更的OS：
+Remix OS 3.0/2.0(仅推荐无SSE4.2用户使用）
+建议使用2.0，兼容性比3.0强，3.0部分应用会闪退或进不去，2.0兼容性秒杀凤凰系统，性能也比凤凰强一些，2.0安卓5.1，3.0安卓6.0；RemixOS的内核版本为4.4，64位无SSE4.2限制，推荐无SSE4.2用户使用，只有64位CPU限制，再说32CPU早就不存在了2004年就停产了，理论上通用，压缩包内有exe安装包也有ISO，2.0请解压至同一独立目录下安装，3.0需手动选择ISO文件。
+下载(多版本)：https://pan.baidu.com/s/1IeATQ1VXSvjMbHYB0AVtsg    提取码：pdbe
+OpenTHOS(不推荐，国产)
+目前最新版本安卓8.1，只有64位版本，无SSE4.2不可用，只支持UFUI启动，而且兼容性较差，系统稳定性也比较差，容易奔溃，暂不支持独显，不支持AMD系列。
+官网(已经无法访问)：https://www.openthos.com/
+下载(安卓8.1版)：https://mirrors.tuna.tsinghua.edu.cn/openthos/Release/8.1/unstable/
+其他版本下载：https://mirrors.tuna.tsinghua.edu.cn/openthos/Release/
+安卓资料和用户手册：https://github.com/openthos/userguide-analysis/blob/master/SUMMARY.md
+以上为持续更新链接，链接内有包含MD5校验码的TXT下载。
+凤凰系统特殊版本
+v2.2.1/2.2.2  x32(安卓7.1)：凤凰系统32位7.1因为兼容性较差所以后面改成5.1了，这是基于凤凰系统_x32安卓7.1最终版2.2.1基础上修改的，兼容性相比原版大幅增加，感谢@万里即可、@youling257等论坛活跃人群的修改测试与提供。
+EXE安装包：https://pan.baidu.com/s/1CGQ8xnL4dXk5mJ_U0ZemsA(暂无ISO安装包)
+V2.2.2修改版论坛链接:http://bbs.phoenixstudio.org/cn/read.php?tid=19088(内有下载安装教程)
+最后一个无广告版本：3.0.7是凤凰系统64位的最后一个无VIP插件(广告)的版本，游戏助手等系统应用为旧版本。
+v3.0.7下载：https://pan.baidu.com/s/1UEvY5cUrZyqDBDfCAi42SA         提取码：ax00(感谢thzzy的提供)
+v1.5.1为1.5.0发布后官方的内测版，该版本无VIP插件，32位用户推荐代替1.5.0使用，1.5.1和1.6.0唯一差别就是1.6.0多了VIP插件和云电脑，其他应用版本完全一致，而1.6.0和1.6.1只是去了云电脑(解决云电脑已停止运行的提示)，也就是说1.5.1和1.6.1除VIP插件以外，没有任何区别，可以说是1.6.1的去广告版本，游戏助手等系统应用为最新版本，与64位相同。
+官方版本测试贴：http://bbs.phoenixstudio.org/cn/read.php?tid=12351
+v1.5.1EXE下载：https://pan.baidu.com/s/1iCekrQXghyt0AvB8_h5HtA        提取码:v5n8
+v1.5.1ISO下载：https://pan.baidu.com/s/1eSOvjbW         提取码:无加密
+Surface专版原帖地址：http://bbs.phoenixstudio.org/cn/read.php?tid=28807
+Surface专版安装教程：http://bbs.phoenixstudio.org/cn/read.php?tid=28972
+Surface Pro4专版下载：https://pan.baidu.com/s/1d0fVFp-OCDmnSNqpDF3sGQ      提取码：j2nt
+MEGA网盘(不限速)：https://mega.nz/#!PKBi0A5A!lEIiBTkUWhBircYmR_eJtuNeUz3jcctpGxmgJgQbtFk
+Surface GO专版下载：https://pan.baidu.com/s/1gLvaSDMxzFuWlT8FFiSbGA
+MEGA网盘(不限速)：https://mega.nz/#!GLJmQaDQ!HN7SrQBYpQH6il1yOLenqe6I566KkQwuAJeQBNxuHMM
+
+完全停更的模拟器：
+靠谱安卓
+老牌模拟器，但是仅仅是个应用商店，没有属于自己的内核，只是靠的其它模拟器运行的框架。
+官网：http://www.kpzs.com/(似乎被腾讯收购了)
+海马玩模拟器\手游助手
+界面还行，易用性也不错，但是性能欠佳，安装包百度里有，后续这里也会补充。
+官网：http://droid4x.haimawan.com/ (已经无法访问)
+天天安卓模拟器
+靠谱的官方模拟器，界面不美观，性能还行，易用性欠佳。
+官网：http://www.ttmnq.com/(似乎被腾讯收购了)
+51模拟器
+更新周期短暂，且一年没更新了，没有比较好的技术支持，所以各方面表现比较差，不推荐使用。
+官网：https://www.51mnq.com/
+论坛：http://bbs.51mnq.com/forum.php?ch=51mnq
+一玩助手
+360做的模拟器，刚开始就倒了，更新周期极短，性能界面以及易用性欠佳，不推荐使用。
+官网：http://www.yiwanzhushou.com/
+小蚁安卓模拟器(原叶子猪)
+性能还行，易用性很差，且停更时间较长，不推荐使用。
+官网：http://tools.yzz.cn/
+常见问题：http://ant.96pk.com/help/
+论坛：http://bbs.yzz.cn/forum-74-1.html?from=anttop
+iTools
+公司现在去做苹果助手了，模拟器数年没更新了，技术基本已经跟不上了，不推荐使用。
+官网：https://pro.itools.cn/syzs/
+下载请选择精简包，完整版因为服务器迁移，已经404了。
+新浪手游助手
+以前是微博官方模拟器，但是现在数年没更新了，技术基本已经跟不上了，不推荐使用。
+官网：http://www.987you.com/
+
+安卓原生OS：
+Android x86(不推荐,安卓原生)
+这是Android x86原版，无游戏助手，不支持应用窗口化，只建议提供研究，不推荐日常使用及游戏，版本号代表安卓版本R代表x86系统版本，目前只收入最新版，即最高R版本。
+安卓x86中文站：http://www.x86android.com/
+9.0 R2更新记录：http://www.x86android.com/articles/2844.html
+64位9.0下载R2：http://down.kejianjidi.com/x86_9.0_r2/android-x86-9.0-r2.iso
+32位9.0下载R2：http://down.kejianjidi.com/x86_9.0_r2/android-x86_64-9.0-r2.iso
+k4.9的64位9.0：http://down.kejianjidi.com/x86_9.0_r2/android-x86_64-9.0-r2-k49.iso
+8.1 R5更新记录：http://www.x86android.com/articles/3042.html
+64位8.1下载R5：http://down.kejianjidi.com/8.1_r5/android-x86-8.1-r5.iso
+32位8.1下载R5：http://down.kejianjidi.com/8.1_r5/android-x86_64-8.1-r5.iso
+K4.9的64位8.0：http://down.kejianjidi.com/8.1_r5/android-x86_64-8.1-r5-k49.iso
+64位7.1下载R3：http://down.x86android.com/x86_7.1/android-x86_64-7.1-r3.iso
+32位7.1下载R3：http://down.x86android.com/x86_7.1/android-x86-7.1-r3.iso
+64位6.0下载R3：http://pan.baidu.com/s/1kVyXZy3     提取码：无加密
+32位6.0下载R3：http://pan.baidu.com/s/1boE7jwr      提取码：无加密
+32位4.4下载R5：http://pan.baidu.com/s/1kVz3fNp     提取码：rke6
+
+```
+http://bbs.phoenixstudio.org/cn/read.php?tid=30102&fid=12  
