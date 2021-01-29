@@ -293,7 +293,7 @@ OpenTHOS(不推荐，国产)
 安卓资料和用户手册：https://github.com/openthos/userguide-analysis/blob/master/SUMMARY.md
 以上为持续更新链接，链接内有包含MD5校验码的TXT下载。
 凤凰系统特殊版本
-v2.2.1/2.2.2  x32(安卓7.1)：凤凰系统32位7.1因为兼容性较差所以后面改成5.1了，这是基于凤凰系统_x32安卓7.1最终版2.2.1基础上修改的，兼容性相比原版大幅增加，感谢@万里即可、@youling257等论坛活跃人群的修改测试与提供。
+v2.2.1/2.2.2  x32(安卓7.1)：凤凰系统32位7.1因为兼容性较差所以后面改成5.1了，这是基于凤凰系统_ x32安卓7.1最终版2.2.1基础上修改的，兼容性相比原版大幅增加，感谢@万里即可、@youling257等论坛活跃人群的修改测试与提供。
 EXE安装包：https://pan.baidu.com/s/1CGQ8xnL4dXk5mJ_U0ZemsA(暂无ISO安装包)
 V2.2.2修改版论坛链接:http://bbs.phoenixstudio.org/cn/read.php?tid=19088(内有下载安装教程)
 最后一个无广告版本：3.0.7是凤凰系统64位的最后一个无VIP插件(广告)的版本，游戏助手等系统应用为旧版本。
@@ -359,3 +359,9 @@ K4.9的64位8.0：http://down.kejianjidi.com/8.1_r5/android-x86_64-8.1-r5-k49.is
 
 ```
 http://bbs.phoenixstudio.org/cn/read.php?tid=30102&fid=12  
+# 删除git所有分支的文件,包括历史分支  
+在项目根目录执行
+```bash
+git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch path-to-your-remove-file' --prune-empty --tag-name-filter cat -- --all
+```
+https://www.cnblogs.com/shines77/p/3460274.html
