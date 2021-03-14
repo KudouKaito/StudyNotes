@@ -365,3 +365,77 @@ http://bbs.phoenixstudio.org/cn/read.php?tid=30102&fid=12
 git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch path-to-your-remove-file' --prune-empty --tag-name-filter cat -- --all
 ```
 https://www.cnblogs.com/shines77/p/3460274.html
+
+# python批量安装包  
+pip install -r requirements.txt
+https://www.cnblogs.com/x2x3/p/11408829.g
+
+# MariaDB,MySQL常见问题
+ERROR 2002 (HY000): Can't connect to local MySQL server through soket '/var/run/mysqld/mysqld.sock' (2)  
+不能通过上述文件连接到MySQL服务  
+可能原因:
+ - 文件不在那个目录, 自己找去, 可以试试locate
+ - 压根就没有安装mysql server, archwiki https://wiki.archlinux.org/index.php/MariaDB_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#%E9%87%8D%E7%BD%AE_root_%E5%AF%86%E7%A0%81 , 如果没有就用包管理器搜索mysql-server
+
+访问root要加sudo
+unix_sock只能用root才能访问  
+将plugin改成mysql_native_password即可, 不过root只能通过管理员访问也是挺合理的
+update mysql.user set authentication_string=PASSWORD(‘mysql’), plugin=‘mysql_native_password’ where user=‘root’;  
+https://blog.csdn.net/zkpython/article/details/107174656?utm_medium=distribute.pc_relevant.none-task-blog-baidujs_title-2&spm=1001.2101.3001.4242  
+
+# Arch时间不准
+timedatectl set-timezone Asia/Shanghai
+
+# keys could not be locally signed
+删掉原来的keys重新init
+```bash
+sudo rm -rf /etc/pacman.d/gnupg
+sudo pacman-key --init
+sudo pacman-key --populate archlinux manjaro
+```
+https://nparsons.uk/blog/manjaro-keys-could-not-be-locally-signed
+https://bbs.archlinux.org/viewtopic.php?pid=1044011#p1044011
+
+
+# deepin wine qq spark 输入框中文显示不正常
+## 总结  
+1. 尝试更改LANG
+如:
+使用`LANG=zh_CN.UTF-8 /opt/apps/com.qq.tim.spark/files/run.sh`运行
+```bash
+#!/bin/bash
+
+#   Copyright (C) 2016 Deepin, Inc.
+#
+#   Author:     Li LongYu <lilongyu@linuxdeepin.com>
+#               Peng Hao <penghao@linuxdeepin.com>
+
+LANG=zh_CN.UTF-8
+BOTTLENAME="Spark-TIM"
+APPVER="3.2.0.21856spark0"
+EXEC_PATH="c:/Program Files/Tencent/TIM/Bin/TIM.exe"
+START_SHELL_PATH="/opt/deepinwine/tools/run_v3.sh"
+export MIME_TYPE=""
+export DEB_PACKAGE_NAME="com.qq.tim.spark"
+export APPRUN_CMD="deepin-wine5"
+
+export ATTACH_FILE_DIALOG=1
+
+if [ -n "$EXEC_PATH" ];then
+    $START_SHELL_PATH $BOTTLENAME $APPVER "$EXEC_PATH" "$@"
+else
+    $START_SHELL_PATH $BOTTLENAME $APPVER "uninstaller.exe" "$@"
+fi
+```
+2. 尝试yay安装windows各类字体,比如ttf-ms-fonts,wqy-zhenhei  
+3. 尝试将装好的字体连接到Fonts里面  
+方法可能不唯一  
+
+## 过程
+~~在网上找了半天,最后发现pacman装一个包就可以了~~  
+```Bash
+sudo pacman -S deepin-fonts-wine
+```
+发现不知道怎么又方框了,上面那个方法又不起效果了  
+最后将环境变量LANG改为zh_CN.UTF-8可以有效
+
