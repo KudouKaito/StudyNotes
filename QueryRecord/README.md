@@ -113,11 +113,13 @@ https://www.cnblogs.com/exmyth/p/8796954.html
 https://www.cnblogs.com/hjbky/p/9512022.html  
 
 
-# polkit 的使用
+# Wed Mar 17 09:03:07 AM CST 2021
+## polkit 的使用
 如果要像KDE运行gparted一样申请权限而不用sudo, 那么就要用到polkit了, 另外, 一定要有一款图形化的polkit库, 不然似乎就运行不了图形软件
 https://wiki.archlinux.org/index.php/Polkit_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
 
-# 全球安卓OS及模拟器汇总总贴(超过30个) 最高安卓11 01.07/2021更新
+# Wed Mar 17 09:03:07 AM CST 2021
+## 全球安卓OS及模拟器汇总总贴(超过30个) 最高安卓11 01.07/2021更新
 ```Text
 
 Android x86安装交流群：1044132520
@@ -366,11 +368,13 @@ git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch path-
 ```
 https://www.cnblogs.com/shines77/p/3460274.html
 
-# python批量安装包  
+# Wed Mar 17 09:02:25 AM CST 2021
+## python批量安装包  
 pip install -r requirements.txt
 https://www.cnblogs.com/x2x3/p/11408829.g
 
-# MariaDB,MySQL常见问题
+# Wed Mar 17 09:02:09 AM CST 2021
+## MariaDB,MySQL常见问题
 ERROR 2002 (HY000): Can't connect to local MySQL server through soket '/var/run/mysqld/mysqld.sock' (2)  
 不能通过上述文件连接到MySQL服务  
 可能原因:
@@ -383,10 +387,12 @@ unix_sock只能用root才能访问
 update mysql.user set authentication_string=PASSWORD(‘mysql’), plugin=‘mysql_native_password’ where user=‘root’;  
 https://blog.csdn.net/zkpython/article/details/107174656?utm_medium=distribute.pc_relevant.none-task-blog-baidujs_title-2&spm=1001.2101.3001.4242  
 
-# Arch时间不准
+# Wed Mar 17 09:01:45 AM CST 2021
+Arch时间不准
 timedatectl set-timezone Asia/Shanghai
 
-# keys could not be locally signed
+# Wed Mar 17 09:01:32 AM CST 2021
+keys could not be locally signed
 删掉原来的keys重新init
 ```bash
 sudo rm -rf /etc/pacman.d/gnupg
@@ -397,7 +403,8 @@ https://nparsons.uk/blog/manjaro-keys-could-not-be-locally-signed
 https://bbs.archlinux.org/viewtopic.php?pid=1044011#p1044011
 
 
-# deepin wine qq spark 输入框中文显示不正常
+# Wed Mar 17 09:00:56 AM CST 2021
+deepin wine qq spark 输入框中文显示不正常
 ## 总结  
 1. 尝试更改LANG
 如:
@@ -438,4 +445,5 @@ sudo pacman -S deepin-fonts-wine
 ```
 发现不知道怎么又方框了,上面那个方法又不起效果了  
 最后将环境变量LANG改为zh_CN.UTF-8可以有效
+
 
