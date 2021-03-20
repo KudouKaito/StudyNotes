@@ -466,3 +466,7 @@ sudo systemctl restart systemd-logd
 
 [《每日Ubuntu小技巧：合上笔记本，系统不睡眠》](https://linux.cn/article-2485-1.html)  
 
+ 
+# Sat Mar 20 07:40:43 PM CST 2021
+java 作用域   
+https://blog.csdn.net/dujianxiong/article/details/92988982
