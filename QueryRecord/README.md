@@ -404,8 +404,8 @@ https://bbs.archlinux.org/viewtopic.php?pid=1044011#p1044011
 
 
 # Wed Mar 17 09:00:56 AM CST 2021
-deepin wine qq spark 输入框中文显示不正常
-## 总结  
+## deepin wine qq spark 输入框中文显示不正常
+### 总结  
 1. 尝试更改LANG
 如:
 使用`LANG=zh_CN.UTF-8 /opt/apps/com.qq.tim.spark/files/run.sh`运行
@@ -438,7 +438,7 @@ fi
 3. 尝试将装好的字体连接到Fonts里面  
 方法可能不唯一  
 
-## 过程
+### 过程
 ~~在网上找了半天,最后发现pacman装一个包就可以了~~  
 ```Bash
 sudo pacman -S deepin-fonts-wine
@@ -446,4 +446,23 @@ sudo pacman -S deepin-fonts-wine
 发现不知道怎么又方框了,上面那个方法又不起效果了  
 最后将环境变量LANG改为zh_CN.UTF-8可以有效
 
+
+# Wed Mar 17 09:04:37 AM CST 2021
+# backlight 无法调节亮度
+调节亮度可以有两个方法, 一个是手动修改/sys/class/backlight/目爱下的下的亮度文件, 另一个方法是用软件来调节, 我一般用xbacklight  
+不过xbacklight 只支持核显, 下面有一篇CSDN的文章好像可以装apcilight(兼容xbacklight)支持独显
+《Backlight - Archwiki》https://wiki.archlinux.org/index.php/Backlight
+《Archlinux 屏幕亮度调节失效问题解决 - CSDN上我觉得挺优秀的博客》https://blog.csdn.net/weixin_40101580/article/details/105347874  
+
+
+# Sat Mar 20 06:58:45 PM CST 2021
+Linux笔记本取消盖上睡眠  
+我的电源是systemd管理的, 所以我改一下systemd的配置就可以了  
+将/etc/systemd/logind.conf文件的HandleLidSwitch的注释去掉,并将值改为ignore(HandleLidSwitch是不插电源合盖操作,插点电源的是另一个, 看英文就懂了)  
+改完之后重启一下systemd-logd服务,或者直接重启就可以了
+```bash
+sudo systemctl restart systemd-logd  
+```
+
+[《每日Ubuntu小技巧：合上笔记本，系统不睡眠》](https://linux.cn/article-2485-1.html)  
 
