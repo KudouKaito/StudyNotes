@@ -470,3 +470,11 @@ sudo systemctl restart systemd-logd
 # Sat Mar 20 07:40:43 PM CST 2021
 java 作用域   
 https://blog.csdn.net/dujianxiong/article/details/92988982
+
+
+# Thu Apr  8 10:43:34 AM CST 2021
+linux磁盘测速 速度测试
+```
+hdparm -Tt /dev/sda
+```
+
