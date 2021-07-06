@@ -478,3 +478,49 @@ linux磁盘测速 速度测试
 hdparm -Tt /dev/sda
 ```
 
+
+# Wed May 19 09:48:59 PM CST 2021
+vim 保存提示CONVERTION ERROR(转换错误)  
+这是文件编码问题, 用`:set fileencoding`查看一下文件编码, 看到如果不是utf8那就改成utf8, 之后就可以保存了  
+
+
+# Wed May 19 10:00:44 PM CST 2021
+vim 编码知识总结(部分, 忘记总结了)
+:set fileencoding 查看当前文件编码, 也可以更改
+:e filename ++enc=编码 可以使用指定编码打开文件 
+
+
+# Wed Jun  9 07:45:39 PM CST 2021
+float.h宏定义比较浮点型大小是否相等  
+float.h里面有EPSILON的宏定义  
+```c
+if (fabs() < DBL_EPSILON) 
+```
+
+# Wed Jul  7 12:20:03 AM CST 2021
+Arch Linux中vncviewer无法连接树莓派, 连接之后秒断
+```bash
+$ gvncviewer 192.168.149.1
+Connected to server
+Disconnected from server
+```
+## 解决方法  
+直接换成realvnc, yay里面有包, aarch64版本是树莓派的, 不知道有什么区别, 大多数人下的都是realvnc-vnc-viewer, 可以使用  
+
+# Wed Jul  7 12:23:31 AM CST 2021
+sudo -u www-data 可以指定用户操作, 测试网站是否有权限进行访问以及读写操作  
+
+# Wed Jul  7 12:24:48 AM CST 2021
+apache使用软链接配置nextcloud出现403 Forbidden You don‘t havepermission to access thisresource.
+修改网站在/etc/apache2/sites-available中对应的配置文件, 将包含软链接的路径加到配置文件中, 并在Options中**加入**FollowSymLinks选项将其打开  
+/etc/apache2/sites-available/000-default.conf
+```apache
+		<Directory /var/www/html>
+                Options +Indexes +FollowSymLinks +MultiViews -SymLinksIfOwnerMatch
+                AllowOverride all
+                Order allow,deny
+                allow from all
+        </Directory>
+```
+
+
