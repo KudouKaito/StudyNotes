@@ -523,4 +523,18 @@ apache使用软链接配置nextcloud出现403 Forbidden You don‘t havepermissi
         </Directory>
 ```
 
+# Sun Aug  1 04:06:47 PM CST 2021
+查看字体映射  
+使用gucharmap很方便  
+
+# Sun Sep 26 02:10:34 PM CST 2021
+Java JButton 无法显示, 只显示三个点"..."  
+原因: 文字太多显示不下了, 或者Margin太大显示不出来, 把Margin调小可能就行了  
+`jButton.setMargin(new Insets(0,0,0,0));`  
+
+# Tue Oct 12 11:55:11 AM CST 2021
+windows 上有winscp linux上有 sshfs
+
+
+
 
