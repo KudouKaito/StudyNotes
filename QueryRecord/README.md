@@ -533,8 +533,46 @@ Java JButton 无法显示, 只显示三个点"..."
 `jButton.setMargin(new Insets(0,0,0,0));`  
 
 # Tue Oct 12 11:55:11 AM CST 2021
+sftp应用  
 windows 上有winscp linux上有 sshfs
 
+# Sat Oct 23 01:31:11 PM CST 2021
+omf oh-my-fish 的安装配置  
+ - 如果有梯子，那么直接`curl -L https://get.oh-my.fish | fish`  
+ - 如果没有梯子，那可能得要去github克隆离线安装甚至要换fastgit
+```bash 
+# with git
+$ git clone https://github.com/oh-my-fish/oh-my-fish
+$ cd oh-my-fish
+$ bin/install --offline
+```
+如果克隆不下来那么换fastgit
+```bash 
+# with git
+$ git clone https://hub.fastgit.org/oh-my-fish/oh-my-fish
+$ cd oh-my-fish
+$ vim repositories
+# 这类似换源，omf的安装目录下也有这个文件，同样将github.com改成hub.fastgit.org
+$ bin/install --offline
+```
 
+# Sat Oct 23 01:44:47 PM CST 2021
+termux 安装Powerline字体  
+https://github.com/powerline/fonts  
+将对应的字体放到~/.termux/font.ttf  
+重启或者执行termux-reload-settings  
+bubthefish上表现最好的我觉得是DejaVu
+
+# Sat Nov 13 10:30:10 PM CST 2021
+运行shell脚本的时候提示`$'\r': command not found`和`syntax error: unexpected end of file`  
+问题原因: 文件格式不对, 该文件的fileformat多半为dos, 而要linux能正常识别, 那么就要将fileformat改成unix. vim操作:
+```vimscript
+" 查看文件格式
+:set fileformat
+" 修改文件格式
+:set fileformat=unix
+" 然后保存
+:wq
+```
 
 
