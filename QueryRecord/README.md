@@ -575,4 +575,10 @@ bubthefish上表现最好的我觉得是DejaVu
 :wq
 ```
 
+# Sun Nov 14 01:04:08 PM CST 2021
+信任apt源, 跳过gpg认证
+```
+deb [trusted=yes] http://...
+```
+https://stackoverflow.com/questions/46562801/how-to-install-debian-package-from-unsigned-repository
 
