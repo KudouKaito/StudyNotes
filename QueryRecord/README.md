@@ -582,3 +582,17 @@ deb [trusted=yes] http://...
 ```
 https://stackoverflow.com/questions/46562801/how-to-install-debian-package-from-unsigned-repository
 
+# Thu Nov 25 07:54:45 PM CST 2021
+嵌入式STM32各种缩写和全称  
+[https://www.cnblogs.com/emanlee/p/14233740.html](https://www.cnblogs.com/emanlee/p/14233740.html)  
+
+# Thu Nov 25 07:57:51 PM CST 2021
+STM32的代码里RCC->APB2ENR是什么意思  
+回答:  
+> 0RCC->APB2ENR这样的语句的意思就是使能相应外设的时钟啊。。。。。。
+> 在需要使用某外设时，需要先开启该外设相应的时钟，否则外设不工作
+> 你多看看《参考手册》及原子哥写的《不完全手册》
+[https://bbs.elecfans.com/jishu_1864339_1_1.html](https://bbs.elecfans.com/jishu_1864339_1_1.html)  
+
+
+
