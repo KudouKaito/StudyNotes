@@ -599,3 +599,10 @@ STM32的代码里RCC->APB2ENR是什么意思
 如何查看一个程序是被什么启动的  
 emmm，这个，，，还真的不太知道，但是在查病毒的时候，发现systemctl status 可以查看PID
 `systemctl status PID`即可查看相关信息，或许可以从这里入手去查是怎么启动的
+
+
+# Fri Dec 10 01:54:24 PM CST 2021
+syntax: character literal contains multiple characters
+Stacktrace:
+Julia单引号只能引一个字符，双引号才能引字符串
+
