@@ -606,3 +606,15 @@ syntax: character literal contains multiple characters
 Stacktrace:
 Julia单引号只能引一个字符，双引号才能引字符串
 
+# Sat Dec 11 08:21:28 PM CST 2021
+ssh实现反向连接  
+本地计算机
+```bash
+ssh -R bind_port:localhost:22 username@host
+```
+服务器
+```bash
+ssh -p bind_port username@localhost
+```
+[https://www.cnblogs.com/x_wukong/p/5997872.html](https://www.cnblogs.com/x_wukong/p/5997872.html)
+
