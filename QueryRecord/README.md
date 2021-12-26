@@ -618,3 +618,18 @@ ssh -p bind_port username@localhost
 ```
 [https://www.cnblogs.com/x_wukong/p/5997872.html](https://www.cnblogs.com/x_wukong/p/5997872.html)
 
+# Sun Dec 26 07:23:24 PM CST 2021
+julia如何画bode图  
+plot(exp10.(w),L(w))  
+
+# Sun Dec 26 07:24:42 PM CST 2021
+julia 函数对矩阵每个元素进行操作  
+在函数名后面加个点exp10.(x)  
+叫做[broadcast](https://cn.julialang.org/JuliaZH.jl/latest/manual/arrays/#Broadcasting)  
+julia>?broadcast
+
+# Sun Dec 26 07:39:36 PM CST 2021
+julia plot指定x和y的显示范围  
+plot(x,y,xlims=(0,1),ylims=(0,1))  
+
+
