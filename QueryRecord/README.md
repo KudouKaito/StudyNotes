@@ -632,4 +632,16 @@ julia>?broadcast
 julia plot指定x和y的显示范围  
 plot(x,y,xlims=(0,1),ylims=(0,1))  
 
+# Sun Jan 16 11:14:55 PM CST 2022
+debian系查看源码有apt-src源, 那么archlinux怎么查看源码呢  
+使用abs, 可以使用svn货和支持git的asp  
+[如何使用 ABS](https://wiki.archlinux.org/title/Arch_Build_System_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8_ABS)  
+
+
+
+
+
+
+
+
 
