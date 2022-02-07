@@ -637,9 +637,11 @@ debian系查看源码有apt-src源, 那么archlinux怎么查看源码呢
 使用abs, 可以使用svn货和支持git的asp  
 [如何使用 ABS](https://wiki.archlinux.org/title/Arch_Build_System_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8_ABS)  
 
-
-
-
+# Mon Feb  7 02:29:15 PM CST 2022
+获取当前活动包名  
+```bash
+adb shell dumpsys activity top| grep ACTIVITY
+```
 
 
 
