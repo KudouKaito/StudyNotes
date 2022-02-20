@@ -643,7 +643,10 @@ debian系查看源码有apt-src源, 那么archlinux怎么查看源码呢
 adb shell dumpsys activity top| grep ACTIVITY
 ```
 
-
-
+# Sun Feb 20 09:52:41 PM CST 2022
+命令行如何持续输出内容, 自动刷新内容  
+```bash
+watch -n 1 free -h
+```  
 
 
