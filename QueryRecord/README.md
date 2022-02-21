@@ -649,4 +649,8 @@ adb shell dumpsys activity top| grep ACTIVITY
 watch -n 1 free -h
 ```  
 
+# Mon Feb 21 04:25:23 PM CST 2022
+下载课堂派上的互动课件  
+ctrl-s保存网页为mhtml然后里面有图片  
+再用img2pdf转成PDF文件即可  
 
