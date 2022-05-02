@@ -654,3 +654,17 @@ watch -n 1 free -h
 ctrl-s保存网页为mhtml然后里面有图片  
 再用img2pdf转成PDF文件即可  
 
+# Thu Apr 14 08:20:25 PM CST 2022
+ffmpeg出现More than 1000 frames duplicated，怎么解决？  
+More than 10000 frames duplicated  
+More than 100000 frames duplicated  
+More than 100000 frames duplicated  
+有很多重复帧  
+ffmpeg -i input.mp4 -vf mpdecimate,setpts=N/FRAME_RATE/TB out.mp4  
+mpdecimate是一个过滤器，过滤掉与前面类似的帧  
+decimate
+v. 大批杀害，大量毁灭；大大削弱，使……严重失效；抽杀……十分之一的人；十中抽一，取十分之一  
+来自知乎https://www.zhihu.com/question/266438967  
+
+
+
