@@ -666,5 +666,59 @@ decimate
 v. 大批杀害，大量毁灭；大大削弱，使……严重失效；抽杀……十分之一的人；十中抽一，取十分之一  
 来自知乎https://www.zhihu.com/question/266438967  
 
+# Sat Jun 25 16:13:48 CST 2022
+结构体的大小计算  
+结构体需要进行内存对齐。由于内存对齐规则，结构体的内存占用不能算为简单的所有元素内存占用只和，为了对齐可能会有一些字节填充。
+## 对齐规则
+字节填充的规则大概可以理解成：
+`每个成员都有一个对齐数，该成员对齐数=min{该成员大小，默认对齐数}，成员的地址要对齐到对齐数的整数倍，结构体总大小为最大对齐数的整数倍，通过字节填充来满足对齐规则`  
+> linux的默认对齐数是4，windows的默认对齐数是8  
+### 例子1
+比如char类型和4字节的int组成结构体  
+`struct { char c; int i; } s;`  
+结构体s占用将会是这样的（用-表示字节填充）  
+c---|iiii  
+c占用一个字节，但是因为要对其，所以会有三个字节填充  
+### 例子2
+`struct { char c; int i; char d; } s;`  
+c---|iiii|d---
+### 例子3
+`struct { char c; char d; int i; } s;`  
+cd--|iiii  
+### 例子4
+`struct { char c; short d; int i; } s;`  
+c-dd|iiii  
+## 修改默认对齐数  
+用预处理指令`#pragma pack(n)`可以改变默认对齐数,当n省略的时候就是取消设置，改会原来系统的默认设置  
+```c
+#include<stdio.h>
+#include<windows.h>
+#pragma pack(8)//将默认对齐数改为8
+struct S1
+{
+	char c1;
+	int i;
+	char c2;
+};
+#pragma pack()//取消设置的默认对齐数，还原为默认
 
+#pragma pack(1)//将默认对齐数改为1
+struct S2
+{
+	char c1;
+	int i;
+	char c2;
+};
+#pragma pack()//取消设置的默认对齐数，还原为默认
+int main()
+{
+	printf("%d\n", sizeof(struct S1)); // 输出12
+	printf("%d\n", sizeof(struct S2)); // 输出6
+	system("pause");
+	return 0;
+}
 
+```
+如果将默认对齐数改为1，那么所有成员的对齐数都为1了，结构体总大小也就是成员大小之和了  
+
+[参考博客-结构体内存对其、修改默认对齐数](https://blog.csdn.net/didi1663478999/article/details/100897373)  
