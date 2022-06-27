@@ -722,3 +722,13 @@ int main()
 如果将默认对齐数改为1，那么所有成员的对齐数都为1了，结构体总大小也就是成员大小之和了  
 
 [参考博客-结构体内存对其、修改默认对齐数](https://blog.csdn.net/didi1663478999/article/details/100897373)  
+
+# Mon Jun 27 13:58:04 CST 2022
+nmcli unmanaged  
+```bash
+touch /etc/NetworkManager/conf.d/10-globally-managed-devices.conf
+sudo service network-manager restart
+```
+
+
+
