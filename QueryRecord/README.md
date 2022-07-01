@@ -730,5 +730,15 @@ touch /etc/NetworkManager/conf.d/10-globally-managed-devices.conf
 sudo service network-manager restart
 ```
 
-
+# Fri Jul  1 13:41:14 CST 2022
+## void \*menset(void \*s, int c, size_t n)    
+将s的前n的字符替换成c  
+c虽然数据类型是int，但是在填充内存块的时候是当做无符号字符型处理的  
+## sizeof(date type)
+sizeof是运算符，但不是函数  
+计算的是数据所占用的字节数  
+对象可以是变量也可以是类型  
+指针大小一般和int大小一样  
+> 但是数组名和结构体名跟指针不一样  
+> 数组名可以看作数组头指针，但是sizeof数组名返回的是整个数组的大小，而sizeof数组指针却只有int大小  
 
