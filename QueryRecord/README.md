@@ -754,3 +754,5 @@ readelf -r 是so档依赖的符号
 -r --relocs 显示可重定位段的信息。
 
 readelf -sD 是so档提供的符号
+1. objdump -x 缺少符号的文件 | grep NEEDED 查看他的依赖
+2. nm 依赖 | grep 符号 看看哪个依赖有这个符号
