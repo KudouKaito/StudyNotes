@@ -745,3 +745,6 @@ sizeof是运算符，但不是函数
 # Tue Jul 19 11:05:11 CST 2022
 Windows共享打印机的端口是139  
 
+# Thu Aug  4 02:03:45 CST 2022
+CANNOT LINK EXECUTABLE "unar": cannot locate symbol "u_charMirror_56" referenced by "/system/lib/libandroid_runtime.so"...  
+nm 查看符号  
