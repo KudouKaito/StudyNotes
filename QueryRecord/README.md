@@ -761,5 +761,26 @@ readelf -sD 是so档提供的符号
 今天看到一个clouddrive server看起来很不错，可以挂在网盘到本地，也可以将本地文件夹分享出去。    
 windows直接安装软件，linux可以用docker使用  
 
+# Tue Aug 30 20:12:37 CST 2022
+RunC requires support for devices cgroup support in kernel.
 
+If CONFIG_CGROUP_DEVICE was enabled during compile time,
+you need to run the following commands (as root) in order
+to use the RunC:
+
+  mount -t tmpfs -o mode=755 tmpfs /sys/fs/cgroup
+  mkdir -p /sys/fs/cgroup/devices
+  mount -t cgroup -o devices cgroup /sys/fs/cgroup/devices
+
+If you got error when running commands listed above, this
+usually means that your kernel lacks CONFIG_CGROUP_DEVICE.
+
+Setting up containerd (1.4.13) ...
+Setting up docker (20.10.16) ...
+NOTE: Docker requires the kernel to support
+device cgroups, namespace, VETH, among others.
+
+To check a full list of features needed, run the script:
+https://github.com/moby/moby/blob/master/contrib/check-config.sh
+Processing triggers for man (1.14.5-3) ...
 
