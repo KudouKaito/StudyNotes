@@ -756,3 +756,10 @@ readelf -r 是so档依赖的符号
 readelf -sD 是so档提供的符号
 1. objdump -x 缺少符号的文件 | grep NEEDED 查看他的依赖
 2. nm 依赖 | grep 符号 看看哪个依赖有这个符号
+
+# Tue Aug 30 19:25:07 CST 2022
+今天看到一个clouddrive server看起来很不错，可以挂在网盘到本地，也可以将本地文件夹分享出去。    
+windows直接安装软件，linux可以用docker使用  
+
+
+
