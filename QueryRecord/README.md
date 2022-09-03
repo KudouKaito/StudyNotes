@@ -784,3 +784,6 @@ To check a full list of features needed, run the script:
 https://github.com/moby/moby/blob/master/contrib/check-config.sh
 Processing triggers for man (1.14.5-3) ...
 
+# Sat Sep  3 09:08:47 PM CST 2022
+archlinux 密码错误次数太多  
+faillock --reset --user username
