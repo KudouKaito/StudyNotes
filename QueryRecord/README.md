@@ -787,3 +787,11 @@ Processing triggers for man (1.14.5-3) ...
 # Sat Sep  3 09:08:47 PM CST 2022
 archlinux 密码错误次数太多  
 faillock --reset --user username
+
+# Wed Nov 30 14:17:21 CST 2022
+好久没写这个文档了  
+方案，英文用Solution比较合适，如果是可能的方案也可以用Proposal。  
+当然如果是“计划、方案”的话可以用Scheme、plan、programme。  
+“项目、方案”用Project  
+
+
