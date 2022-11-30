@@ -794,4 +794,5 @@ faillock --reset --user username
 当然如果是“计划、方案”的话可以用Scheme、plan、programme。  
 “项目、方案”用Project  
 
-
+# Wed Nov 30 17:13:11 CST 2022
+git merge/rebase相关内容，写B站笔记了  
