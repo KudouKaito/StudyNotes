@@ -787,3 +787,13 @@ Processing triggers for man (1.14.5-3) ...
 # Sat Sep  3 09:08:47 PM CST 2022
 archlinux 密码错误次数太多  
 faillock --reset --user username
+
+# Thu Feb  9 09:29:30 AM CST 2023
+ls倒序排列    
+ls -r 倒序reverse   
+比如按时间排列为`ls -c`  
+那么按时间倒序排列则为`ls -rc`  
+
+
+
+
