@@ -803,6 +803,7 @@ ls -r 倒序reverse
 比如按时间排列为`ls -c`  
 那么按时间倒序排列则为`ls -rc`  
 
-
+# Thu Feb  9 10:49:15 AM CST 2023
+`git log --oneline --graph`可以更清楚地看到分支情况  
 
 
