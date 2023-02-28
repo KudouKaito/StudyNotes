@@ -806,4 +806,79 @@ ls -r 倒序reverse
 # Thu Feb  9 10:49:15 AM CST 2023
 `git log --oneline --graph`可以更清楚地看到分支情况  
 
+# Thu Feb  9 07:47:31 PM CST 2023
+CSV如何导入到MySQL中   [知乎](https://www.zhihu.com/tardis/sogou/art/462108157)  
+
+# Thu Feb  9 08:09:54 PM CST 2023
+MySQL常用操作  
+[创建数据库](https://m.runoob.com/mysql/mysql-create-database.html)  
+
+# Thu Feb  9 08:45:02 PM CST 2023
+将csv导入到MySQL中  
+1. 创建数据库  
+```MySQL
+CREATE DATABASE 数据库名;
+```
+2. 创建数据表  
+```MySQL
+CREATE TABLE 表名 (
+    键值1 VARCHAR(255) NULL,
+    键值2 VARCHAR(255) NULL,
+    ...
+); 
+```
+键值的名称不一定要和CSV表头一致，但是顺序要一致  
+知乎建议数据类型都用VARCHAR(255)且不设置主值，因为不能确定CSV的数据是否能符合规范  
+>  如果键值和关键词冲突，创建表格的时候会报错13语法错误。  
+3. [导入csv](https://www.zhihu.com/tardis/sogou/art/462108157)  
+在下面的例子中，添加的参数指定字段用逗号分隔，字符串用双引号括起来，第一行必须被忽略，因为它包含列标题。
+```
+LOAD DATA 
+LOCAL INFILE 'c:/csvdata/books.csv'
+INTO TABLE BooksCSV  
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+IGNORE 1 ROWS;
+```
+4. [导出csv](https://zhuanlan.zhihu.com/p/444937414)
+```
+SELECT * FROM 表名
+INTO OUTFILE '/var/lib/mysql-files/users.csv' 
+FIELDS TERMINATED BY ',';
+```
+
+# Sun Feb 12 02:52:05 PM CST 2023
+数据库用户以及权限操作    
+创建远程访问用户  
+```
+CREATE USER "username"@"ip" IDENTIFIED BY "password";
+CREATE USER "bigdata"@"%" IDENTIFIED BY "bigdata@123";
+# %是通配符，如果要限制范围指定IP比如192.168.1.%，如果本地用户则可以设置为本地ip或者"localhost"
+```
+赋权  
+```
+GRANT ALL PRIVILEGES ON *.* TO "bigdata"@"%";
+# *.*，DATABASE.TABLE，所有数据库的所有表的ALL PRIVILEGES  
+```
+
+# Sun Feb 12 05:35:39 PM CST 2023
+mysql远程用户本地无法登录   
+可能是因为有两个本地匿名用户的原因。   
+
+# Mon Feb 27 06:46:47 PM CST 2023
+grep 显示所有行  
+`grep "内容\|"`  
+`grep '内容|'`  
+后面加\|就可以了  
+|是或的意思  
+
+# Tue Feb 28 03:47:33 PM CST 2023
+gitbook报错  
+https://blog.csdn.net/qq_33641175/article/details/122508473  
+
+
+
+
+
+
 
