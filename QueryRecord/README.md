@@ -876,7 +876,30 @@ grep 显示所有行
 gitbook报错  
 https://blog.csdn.net/qq_33641175/article/details/122508473  
 
+# Tue Feb 28 05:09:57 PM CST 2023
+我的解决linxu梯子解决方案  
+1. trojan单节点改配置文件  
+2. clash+网页dashboard，网页dashboard有clash-dashboard-git和yacd，我用的应该是前者. 
+```yaml
+#port: 7890
+#socks-port: 7891
+mixed-port: 7890
+allow-lan: true
+mode: Rule
+log-level: info
+# 这两行就是dashboard的配置  
+external-controller: :9090
+external-ui: clash-dashboard-git
+proxies:
+```
 
+# Wed Mar  8 09:48:57 PM CST 2023
+archlinux 低电量自动休眠  
+https://zhuanlan.zhihu.com/p/523924023?utm_id=0
+
+# Wed Mar  8 09:52:06 PM CST 2023
+hibernate 和 hybrid-sleep的区别  
+hybrid-sleep 是 hibernate 和 hybrid-sleep 的融合，混合睡眠  
 
 
 
