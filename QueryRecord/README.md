@@ -901,6 +901,30 @@ https://zhuanlan.zhihu.com/p/523924023?utm_id=0
 hibernate 和 hybrid-sleep的区别  
 hybrid-sleep 是 hibernate 和 hybrid-sleep 的融合，混合睡眠  
 
+# Mon Mar 13 04:30:32 PM CST 2023
+https://segmentfault.com/a/1190000042644816?sort=newest
+安装个cockpit  
+```
+# 分别是本体、KVM支持和podman支持，虽然都不知道后面的东西是什么
+apt install cockpit cockpit-machines cockpit-podman  
+# 启动服务(开机启动可以enable --now)
+sudo systemctl start cockpit
+
+```
+
+# Mon Mar 13 05:11:40 PM CST 2023
+重定向没有root权限怎么办  
+用tee  
+```
+sudo cat file.txt > file_cat.txt
+cat file.txt | sudo tee file_tee.txt
+```
+如果不想输出到屏幕上就重新在重定向一次就行了，比如在加个管道来计算输出字符  
+```
+df | tee output5.txt > /dev/null
+ls | tee output4.txt | wc -lcw
+```
+
 
 
 
