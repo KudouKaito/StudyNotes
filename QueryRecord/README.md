@@ -926,6 +926,53 @@ ls | tee output4.txt | wc -lcw
 ```
 
 
+# Wed Mar 15 11:33:33 AM CST 2023
+ls -n 可以查看软链接的指向，感觉和ls -l 差不太多  
+
+# Wed Mar 15 11:35:59 AM CST 2023
+ubuntu dpkg可以控制版本，比如控制python版本  
+通过update-alternatives --config python 来切换版本  
+
+
+# Wed Mar 15 02:33:19 PM CST 2023
+mpv播放器快捷键  
+[百度文档版本](https://wenku.baidu.com/view/184cdd342179168884868762caaedd3383c4b592.html?_wkts_=1678861916013)  
+[键盘图版本](https://zhuanlan.zhihu.com/p/533804122)    
+
+
+# Sun Mar 19 05:48:39 PM CST 2023
+将本机的网络分享给另一张网卡的局域网用户  
+https://blog.csdn.net/dogheader/article/details/128394561
+A通过网卡2把A的网卡1共享给B; B的网卡3要和网卡1连接到同一个网络并且同一个网段  
+1. 在服务器A设置网卡分享  
+在nm-connection-editor里面添加一个“以太网”配置，在Ethernet选项卡的Device选择要分享的网卡，在IPv4 Settings选项卡的Methed选择Share to other computers     
+2. 打开服务器A的分享功能  
+```sh
+# 打开ip转发
+echo 1 > /proc/sys/net/ipv4/ip_forward
+iptables -F
+iptables -P INPUT ACCEPT
+iptables -P FORWARD ACCEPT
+#（wlp2s0为A要分享的网卡）
+iptables -t nat -A POSTROUTING -o wlp2s0 -j MASQUERADE     
+```
+3. 将A的IP地址设置为B的网关   
+```
+＃　设置服务器Ａ的有限网卡ｉｐ为服务器Ｂ的网关，
+route add -net 0.0.0.0/0 gw A的IP地址
+```
+
+# Sun Mar 19 08:21:18 PM CST 2023
+git submodule update --init换源  
+修改`.gitmodules`文件即可  
 
 
 
+
+
+
+
+
+
+
+粉上 橙下 黑高 红黄低
