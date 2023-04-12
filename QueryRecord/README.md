@@ -966,9 +966,89 @@ route add -net 0.0.0.0/0 gw A的IP地址
 git submodule update --init换源  
 修改`.gitmodules`文件即可  
 
+# Thu Mar 23 12:07:14 PM CST 2023
+vnc启动剪贴板  
+只需要启动vncconfig即可，可以在xstartup里面加一句`vncconfig -nowin -iconic &`
 
+# Thu Mar 23 04:44:06 PM CST 2023
+走临时代理  
+export http_proxy=http://127.0.0.1:51837
+先设置一个临时代理
+再yay -S yay-git即可
 
+ALL_PROXY=socks://localhost:1082 yay package-name
+或者yay -S yay-git
 
+# Fri Mar 24 03:26:06 PM CST 2023
+
+https://www.cnblogs.com/457220157-FTD/p/4074278.html
+
+# Sat Apr  1 08:46:34 PM CST 2023
+fish shell通配符的问题  
+在bash的时候，通配符直接使用就可以搜索包，但是在fish不能使用通配符来进行匹配  
+可能是因为fish的通配符和包管理器的通配符冲突了  
+`sudo apt install ros-melodic-freenect-\*`
+加个反斜杠即可  
+
+# Mon Apr  3 03:32:15 PM CST 2023
+[XDG_MIME_Applications - archwiki](https://wiki.archlinux.org/title/XDG_MIME_Applications)
+[Xdg-utils - archwiki](https://wiki.archlinux.org/title/Xdg-utils)
+查询并修改xdg-opem的默认启动方式  
+`xdg-mime query filetype FILENAME`可以查到文件的类型    
+查到文件类型之后可以查看该类型的默认启动方式  
+```
+xdg-mime query default application/vnd.openxmlformats-officedocument.wordprocessingml
+```
+通过设置调试相关的环境变量可以输出查找过程  
+```
+> env XDG_UTILS_DEBUG_LEVEL=10  xdg-mime query default application/vnd.openxmlformats-officedocument.wordprocessingml.document
+Checking /home/kaito/.config/mimeapps.list
+Checking /home/kaito/.local/share/applications/mimeapps.list
+Checking /home/kaito/.local/share/applications/defaults.list and /home/kaito/.local/share/applications/mimeinfo.cache
+Checking /home/kaito/.local/share/applications/defaults.list and /home/kaito/.local/share/applications/mimeinfo.cache
+Checking /usr/local/share//applications/defaults.list and /usr/local/share//applications/mimeinfo.cache
+Checking /usr/local/share//applications/defaults.list and /usr/local/share//applications/mimeinfo.cache
+Checking /usr/share//applications/defaults.list and /usr/share//applications/mimeinfo.cache
+libreoffice-writer.desktop
+```
+查询用`xdg-mine query default xxx` ，设置的时候直接把query去掉就可以了，只不过在文件类型前面需要加个参数  
+```
+xdg-mime default wps-et.desktop application/vnd.openxmlformats-officedocument.wordprocessingml
+```
+
+# Wed Apr 12 01:38:48 PM CST 2023
+网络访问问题，Ping: A<->B, A<->C, B<-/->C, 一个设备跟其他两个设备可以互相Ping通，但是另外两个设备怎么都Ping不通。  
+这个可能是路由表的问题。  
+ping不通的两个设备用traceroute看看是不是直接返回的!H，连路由器都不访问一下  
+```
+$ traceroute 10.33.18.133
+traceroute to 10.33.18.133 (10.33.18.133), 30 hops max, 60 byte packets
+ 1  KudouKaito (10.33.1.172)  3048.523 ms !H  3048.258 ms !H  3048.242 ms !H
+```
+如果是，那么路由表里面可能就把这个地址认为是本机地址，不需要路由  
+```
+$ route -n     
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+0.0.0.0         192.168.3.1     0.0.0.0         UG    100    0        0 enp0s20f0u2u3
+0.0.0.0         10.33.0.1       0.0.0.0         UG    20600  0        0 wlp1s0
+10.0.0.0        0.0.0.0         255.255.255.0   U     0      0        0 ztc3quoimf
+10.14.0.0       0.0.0.0         255.255.255.0   U     0      0        0 ztyouq74zp
+10.33.0.0       0.0.0.0         255.255.128.0   U     600    0        0 wlp1s0
+172.17.0.0      0.0.0.0         255.255.0.0     U     0      0        0 docker0
+192.168.3.0     0.0.0.0         255.255.255.0   U     100    0        0 enp0s20f0u2u3
+```
+其中Gateway为0.0.0.0的就被认为是本机地址
+> Gateway是0.0.0.0或者\*表示目标是本主机所属的网络，不需要路由
+可见10.33.0.0没有找到合适的网关，直接当作了本地地址，当然就!H了  
+> 路由表优先级应该是按照掩码长度排的，先长后短。  
+## 解决方法  
+将不合适的路由表项删掉，使用默认路由  
+```
+sudo route del -net 10.33.0.0 gw 0.0.0.0 netmask 255.255.128.0 dev wlp1s0  
+```
+或者添加一个表项指定网关  
+> 这样修改路由表应该是临时的，重启失效，若要保留可能需要写入到配置文件中，不过我也就访问的时候再设置就行了  
 
 
 
