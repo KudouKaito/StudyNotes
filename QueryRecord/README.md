@@ -1051,8 +1051,240 @@ sudo route del -net 10.33.0.0 gw 0.0.0.0 netmask 255.255.128.0 dev wlp1s0
 > 这样修改路由表应该是临时的，重启失效，若要保留可能需要写入到配置文件中，不过我也就访问的时候再设置就行了  
 
 
+# Wed Apr 19 10:19:46 AM CST 2023
+minicom `Save setup as ...`之后如何读取已命名配置    
+`minicom -s 配置名称`或者`minicom 配置名称`即可  
+`-s`是读取并配置，没有-s就直接连接  
 
+# Mon Apr 24 03:32:05 PM CST 2023
+vim展开底部报错信息  
+```
+:messages
+```
+
+# Mon Oct  2 12:23:18 PM CST 2023
+配置触控板触控单击（点触单击），自然滚动（反转滚动），打字时禁用触控板  
+`man 5 xorg.conf`是所有xorg设备配置的总文档，在最下方可以看到输入设备的各个文档的入口，其中触控板文档入口在`man 4 libinput`在里面找到touchpad相关的东西即可。  
+然后去修改配置文件`sudo vim /usr/share/X11/xorg.conf.d/40-libinput.conf`  
+找到touchpad  
+```conf
+Section "InputClass"
+        Identifier "libinput touchpad catchall"
+        MatchIsTouchpad "on"
+            Option "Tapping" "on"
+            Option "DisableWhileTyping" "on"
+        MatchDevicePath "/dev/input/event*"
+        Driver "libinput"
+EndSection
+```
+
+# Thu Oct  5 11:35:39 PM CST 2023
+修改rime的配置  
+[定製指南](https://github.com/rime/home/wiki/RimeWithSchemata#%E5%AE%9A%E8%A3%BD%E6%8C%87%E5%8D%97)
+[CustomizationGuide](https://github.com/rime/home/wiki/CustomizationGuide)  
+[小狼毫（Rime）输入法设置Shift直接上屏英文字符并切换为英文状态方法](https://blog.csdn.net/sdujava2011/article/details/84098971)  
+共享配置在/usr/share/rime-data里面，如果要搜索什么按键比如Shift_L可以`grep -r Shift_L /usr/share/rime-data`   
+> 记得要把fcitx的快捷键给改掉，要不然直接触发的就是fcitx的快捷键了  
+
+
+```shell
+# grep -r 'Shift_L' /usr/share/rime-data
+./default.yaml:    Shift_L: inline_ascii
+```
+可以看到这个配置在default.yaml里面
+```
+ 58 ascii_composer:
+ 59   good_old_caps_lock: true
+ 60   switch_key:
+ 61     Shift_L: inline_ascii
+ 62     Shift_R: commit_text
+ 63     Control_L: noop
+ 64     Control_R: noop
+ 65     Caps_Lock: clear
+ 66     Eisu_toggle: clear
+```
+我们可以创建一个文件 default.custom.yaml 在rime的用户文件夹里面，因为我们要修改的是default.yaml的预设方案，所以我们要創建一個文件名的主體部份（「.」之前）與要定製的文件相同、次級擴展名（位於「.yaml」之前）寫作 .custom 的定製檔   
+```
+patch:
+  "ascii_composer/switch_key/Shift_L": commit_code #在patch把默认配置里面的配置修改成我们自己的配置，文件里面冒号换行缩进为一级，我们/为一级，对应原来的文件，第一级为ascii_composer依此类推，当然也可以不用/缩写，/缩写只是代表switch_key下面只单独打一个Shift_L打补丁，如果由多个，也可以展开。
+  "ascii_composer/switch_key/Shift_R": commit_code
+```
+
+
+# Fri Oct  6 09:31:15 AM CST 2023
+输入法方案笔记  
+[必知必会](https://github.com/rime/home/wiki/RimeWithSchemata#%E5%BF%85%E7%9F%A5%E5%BF%85%E6%9C%83)
+[Schema.yaml 詳解](https://github.com/LEOYoon-Tsaw/Rime_collections/blob/master/Rime_description.md)
+输入法引擎由两个部分组成，一个是引擎方案配置schema.yaml，另一个是方案词库dict.yaml。
+terra_pinyin.schema.yaml  
+```
+engine: 
+  processors: 
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - table_translator@custom_phrase
+    - reverse_lookup_translator
+    - script_translator
+  filters:
+    - simplifier
+    - uniquifier
+
+```
+输入法引擎由这几部分组成，在这里选择需要用的引擎。选择好引擎之后有些引擎需要配置  
+比如speller处理输入的内容，用于translators的匹配，也可以理解成speller就是用来输入匹配的。  
+translators就是匹配候选词，并且处理显示内容的引擎。  
+下面是具体的配置  
+```
+speller: # 输入匹配
+  alphabet: 'zyxwvutsrqponmlkjihgfedcba-;/<,>\'
+  initials: zyxwvutsrqponmlkjihgfedcba
+  delimiter: " '"
+  algebra:
+    - xform/^r5$/er5/
+    - abbrev/^([a-z]).+$/$1/
+    - abbrev/^([zcs]h).+$/$1/
+    - derive/^([nl])ve/$1ue/
+    - derive/^([jqxy])u/$1v/
+    - derive/([dtnlgkhrzcs])un/$1uen/
+    - derive/ui/uei/
+    - derive/iu/iou/
+    - derive/ao/oa/
+    - derive/([aeiou])ng/$1gn/
+    - derive/([iu])a(o|ng?)/a$1$2/
+    - derive/^([a-z]+)[0-5]$/$1/
+    - derive/([dtngkhrzcs])o(u|ng)$/$1o/
+    - derive/ong$/on/
+    - 'erase/^.*5$/'
+    - 'xlit 1234 -/<\' # 用-/<\来匹配1234
+    - 'derive/^(.*)-$/$1;/' # xxx;转换成xxx-来匹配，也就是说;也是一声,$1匹配的是第一个带扩号的正则
+    - 'derive/^(.*)<$/$1,/'
+    - 'derive/^(.*)\\$/$1>/'
+
+translator: # 输出显示
+  dictionary: terra_pinyin
+  spelling_hints: 5  # ～字以內候選標註完整帶調拼音
+  preedit_format: # 预编辑格式
+    - xform/([nl])v/$1ü/
+    - xform/([nl])ue/$1üe/
+    - xform/([nl])üen/$1uen/
+    - xform/([jqxy])v/$1u/
+    - xform/eh/ê/
+    - 'xform ([aeiou])(ng?|r)([-;/<,>\\]) $1$3$2'
+    - 'xform ([aeo])([iuo])([-;/<,>\\]) $1$3$2'
+    - 'xform a[-;] ā'
+    - 'xform a/ á'
+    - 'xform a[<,] ǎ'
+    - 'xform a[>\\] à'
+    - 'xform e[-;] ē'
+    - 'xform e/ é'
+    - 'xform e[<,] ě'
+    - 'xform e[>\\] è'
+    - 'xform o[-;] ō'
+    - 'xform o/ ó'
+    - 'xform o[<,] ǒ'
+    - 'xform o[>\\] ò'
+    - 'xform i[-;] ī'
+    - 'xform i/ í'
+    - 'xform i[<,] ǐ'
+    - 'xform i[>\\] ì'
+    - 'xform u[-;] ū'
+    - 'xform u/ ú'
+    - 'xform u[<,] ǔ'
+    - 'xform u[>\\] ù'
+    - 'xform ü[-;] ǖ'
+    - 'xform ü/ ǘ'
+    - 'xform ü[<,] ǚ'
+    - 'xform ü[>\\] ǜ'
+  comment_format: # 候选词标注拼音
+    - xform ([aeiou])(ng?|r)([1234]) $1$3$2
+    - xform ([aeo])([iuo])([1234]) $1$3$2
+    - xform a1 ā
+    - xform a2 á
+    - xform a3 ǎ
+    - xform a4 à
+    - xform e1 ē
+    - xform e2 é
+    - xform e3 ě
+    - xform e4 è
+    - xform o1 ō
+    - xform o2 ó
+    - xform o3 ǒ
+    - xform o4 ò
+    - xform i1 ī
+    - xform i2 í
+    - xform i3 ǐ
+    - xform i4 ì
+    - xform u1 ū
+    - xform u2 ú
+    - xform u3 ǔ
+    - xform u4 ù
+    - xform v1 ǖ
+    - xform v2 ǘ
+    - xform v3 ǚ
+    - xform v4 ǜ
+    - xform/([nljqxy])v/$1ü/
+    - xform/eh[0-5]?/ê/
+    - xform/([a-z]+)[0-5]/$1/
+
+```
+
+# Fri Oct  6 02:12:04 PM CST 2023
+python bus.Interface对应shell dbus-send的写法
+```python3
+bus = dbus.SessionBus()
+obj = bus.get_object('连接名', '对象路径')
+myinterface = dbus.Interface(obj, dbus_interface='接口名')
+myinterface.方法名([参数值，参数值])
+```
+shell写法    
+```shell
+dbus-send --session --type=method_call --print-reply --dest=连接名 对象路径 接口名.方法名 [参数类型:参数值 参数类型:参数值]
+```
+示例  
+python3  
+```python3
+bus = dbus.SessionBus()
+obj = bus.get_object('org.fcitx.Fcitx5', '/rime')
+myinterface = dbus.Interface(obj, dbus_interface='org.fcitx.Fcitx.Rime1')
+myinterface.SetAsciiMode(False)
+```
+shell  
+```shell
+dbus-send --session --type=method_call --print-reply --dest=org.fcitx.Fcitx5 /rime org.fcitx.Fcitx.Rime1.SetAsciiMode boolean:False
+
+```
+
+# Fri Oct  6 03:38:50 PM CST 2023
+shell选项解析   
+getopts是shell自带的，不支持长选项  
+getopt支持长选项，但是需要加包  
+
+
+# Sun Nov 19 10:15:48 AM CST 2023
+好用的字体管理字体字符管理工具  
+gucharmap  
+
+字体查询
+`fc-match -v "FontAwesome"|grep Awe`  
+`fc-list SourceCodePro-BlackIt.otf`  
+字体刷新  
+`sudo fc-cache -vf`  
 
 
 
 粉上 橙下 黑高 红黄低
+
