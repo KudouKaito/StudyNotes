@@ -1050,7 +1050,6 @@ sudo route del -net 10.33.0.0 gw 0.0.0.0 netmask 255.255.128.0 dev wlp1s0
 或者添加一个表项指定网关  
 > 这样修改路由表应该是临时的，重启失效，若要保留可能需要写入到配置文件中，不过我也就访问的时候再设置就行了  
 
-
 # Wed Apr 19 10:19:46 AM CST 2023
 minicom `Save setup as ...`之后如何读取已命名配置    
 `minicom -s 配置名称`或者`minicom 配置名称`即可  
@@ -1287,4 +1286,72 @@ gucharmap
 
 
 粉上 橙下 黑高 红黄低
+
+=======
+粉上 橙下 黑高 红黄低
+
+
+# Thu Jun 22 01:17:35 CST 2023
+部署tinyfilemanager  
+安装php,nginx和php-fpm  
+修改$PREFIX/etc/php-fpm.d/www.conf  
+```
+41c41,42
+< listen = /data/data/com.termux/files/usr/var/run/php-fpm.sock
+---
+> ;listen = /data/data/com.termux/files/usr/var/run/php-fpm.sock
+> listen = 127.0.0.1:9000
+```
+修改$PREFIX/etc/nginx/nginx.conf  
+```
+44,45c44,45
+<             root   /data/data/com.termux/files/usr/share/nginx/html;
+<             index  index.html index.htm;
+---
+>             root   /data/data/com.termux/files/usr/var/www/tinyfilemanager; # 改动,原为/data/data/com.termux/files/usr/share/nginx/html;
+>             index  index.html index.htm index.php; # 改动 +index.php
+64,71c64,71
+<         #
+<         #location ~ \.php$ {
+<         #    root           html;
+<         #    fastcgi_pass   127.0.0.1:9000;
+<         #    fastcgi_index  index.php;
+<         #    fastcgi_param  SCRIPT_FILENAME  /scripts$fastcgi_script_name;
+<         #    include        fastcgi_params;
+<         #}
+---
+>         # 改动,取消注释并且修改/scripts的路径
+>         location ~ \.php$ {
+>             root           /data/data/com.termux/files/home;
+>             fastcgi_pass   127.0.0.1:9000;
+>             fastcgi_index  index.php;
+>             fastcgi_param  SCRIPT_FILENAME  /data/data/com.termux/files/usr/var/www/tinyfilemanager$fastcgi_script_name;
+>             include        fastcgi_params;
+>         }
+```
+
+# Fri Jun 23 19:41:17 CST 2023
+gitbook LaTeX公式渲染方案  
+方案有两种：  
+gitbook-plugin-katex-pro  
+gitbook-plugin-mathjax-single-dollar  
+KaTeX是轻量的LaTeX渲染实现，csdn等用的都是KaTeX的渲染。优点是快，缺点功能少，没有右键菜单用于复制公式。  
+mathjax是比较传统成熟的LaTeX渲染实现，优点是右键菜单有各种功能，比如现实公式源码、选择渲染方式等。  
+katex和mathjax的插件还有很多个，但是其他插件都会有一些小小的缺点  
+
+|插件名称|存在不足|  
+|:------:|:------:|  
+|katex|渲染正常，但是存在中文字符会报错，而且需要两个dollar符号|  
+|katex-plus|渲染好像不正常（不记得了），而且也不支持Unicode|  
+|katex-ng|渲染不正常比如不等号的斜杠会渲染成方框，支持Unicode|  
+|mathjax-pro|内嵌公式需要两个dollar符号|  
+
+
+# Fri Jun 23 21:16:23 CST 2023
+找honkit插件  
+honkit是gitbook的一个分支，gitbook-cli不再维护，所以换成honkit是一个很好的选择，honkit几乎兼容gitbook，可以直接使用  
+honkit去除了`gitbook install ./`的方式，统一使用npm install gitbook-plugin-\*/honkit-plugin-\*来安装  
+找插件一般去npmjs.com搜索`gitbook-plugin-插件名字` 来寻找插件，少部分插件是为honkit写的以`honkit-plugin`来头，推荐按质量Q排序，也可以看更新时间。  
+也可以在本地使用npm search来快速搜索，不过要查看插件说明的话还是在网页比较好。  
+
 
