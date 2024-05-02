@@ -1357,6 +1357,7 @@ honkit去除了`gitbook install ./`的方式，统一使用npm install gitbook-p
 # Thu May  2 05:21:45 PM CST 2024
 npm 安装加--save-dev有什么用  
 npm的很多操作都回写到配置文件里面，npm安装的包会当作项目依赖写入package.json里面，加--save-dev表示开发依赖，项目最终运行是不需要这个依赖的。  
+如果不执行npm init或者npm init -y（不询问全默认），npm相关的文件就会在home目录生成，比如`package.json`和`node_modules/`  
 https://blog.csdn.net/SiShen654/article/details/108963688
 
 
