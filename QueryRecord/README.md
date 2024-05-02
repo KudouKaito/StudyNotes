@@ -1354,4 +1354,11 @@ honkit去除了`gitbook install ./`的方式，统一使用npm install gitbook-p
 找插件一般去npmjs.com搜索`gitbook-plugin-插件名字` 来寻找插件，少部分插件是为honkit写的以`honkit-plugin`来头，推荐按质量Q排序，也可以看更新时间。  
 也可以在本地使用npm search来快速搜索，不过要查看插件说明的话还是在网页比较好。  
 
+# Thu May  2 05:21:45 PM CST 2024
+npm 安装加--save-dev有什么用  
+npm的很多操作都回写到配置文件里面，npm安装的包会当作项目依赖写入package.json里面，加--save-dev表示开发依赖，项目最终运行是不需要这个依赖的。  
+https://blog.csdn.net/SiShen654/article/details/108963688
+
+
+
 
